@@ -1,0 +1,29 @@
+class Action < ActiveRecord::Base
+  belongs_to :feed
+  
+  acts_as_taggable
+  
+  def update_from_feed_item(item)
+    self.title = item.title
+    self.url = item.link
+    self.description = item.description
+  end
+  
+  def description=(new_description)
+    write_attribute(:description, fix_quoted_html(new_description))
+    look_for_tags
+  end
+
+protected
+  def fix_quoted_html(text)
+    text.gsub(/\&lt;/, '<').gsub(/\&gt;/, '>')
+  end
+  
+  def look_for_tags
+    if feed.tag_finder
+      match = description.match(feed.tag_finder.to_s)
+      self.tag_list = match[1] if match and match[1]
+      puts "Found Tags: #{self.tag_list}"
+    end
+  end
+end

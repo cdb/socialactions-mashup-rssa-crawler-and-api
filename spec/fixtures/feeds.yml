@@ -1,84 +1,102 @@
 global_giving:
   name: GlobalGiving
   url: http://feeds.feedburner.com/GlobalGivingProjects
+  tag_finder: 
   last_accessed: <%= 1.day.ago %>
 
 pledge_bank:
   name: PledgeBank
   url: http://everywhere.en-gb.pledgebank.com/rss/list
+  tag_finder: 
   last_accessed: <%= 1.day.ago %>
 
 change_org_giving:
   name: Change.org Giving Networks
   url: http://www.change.org/giving_networks/rss
+  tag_finder: "<br />Tags: ([\w\s,]+)<br />" 
   last_accessed: <%= 1.day.ago %>
 
-change_org_canges:
+change_org_changes:
   name: Change.org Changes 
   url: http://www.change.org/changes/rss
+  tag_finder: "<br />Tags: ([\w\s,]+)<br />" 
   last_accessed: <%= 1.day.ago %>
 
 razoo_acts:
   name: Razoo Acts
   url: http://beta.razoo.com/browse/acts?sort=new.d&filter=ne&format=xml
+  tag_finder: 
   last_accessed: <%= 1.day.ago %>
 
 razoo_goals:
   name: Razoo Goals
   url: http://beta.razoo.com/browse/goals?sort=new.d&format=xml
+  tag_finder: 
   last_accessed: <%= 1.day.ago %>
 
 democracy_in_action:
   name: DemocracyinAction
   url: http://salsa.democracyinaction.org/dia/network/pfp.jsp
+  tag_finder: 
   last_accessed: <%= 1.day.ago %>
 
 care_2_petitions:
   name: Care2 Petitions
   url: http://www.thepetitionsite.com/browse-petitions/rss
+  tag_finder: 
   last_accessed: <%= 1.day.ago %>
 
-the_point:
-  name: ThePoint
-  url: https://www.thepoint.com/rss
-  last_accessed: <%= 1.day.ago %>
+# https is causing failing right now
+# the_point:
+#   name: ThePoint
+#   url: http://www.thepoint.com/rss
+#   tag_finder: 
+#   last_accessed: <%= 1.day.ago %>
 
 give_meaning_proposals:
   name: GiveMeaning Proposals 
   url: http://www.givemeaning.com/SaveAnything/SearchAssetsRSS.aspx?Community=%2fWorld&Cause=0&type=proposals&sortby=DateAdded&dir=Desc&pagesize=50
+  tag_finder: "\n\n Tags: ([\w\s,]+)"
   last_accessed: <%= 1.day.ago %>
 
 give_meaning_projects:
   name: GiveMeaning Projects
   url: http://www.givemeaning.com/SaveAnything/SearchAssetsRSS.aspx?Community=%2fWorld&Cause=0&type=projects&sortby=DateAdded&dir=Desc&pagesize=50
+  tag_finder: "\n\n Tags: ([\w\s,]+)"
   last_accessed: <%= 1.day.ago %>
 
 changing_the_present:
   name: ChangingthePresent New Drives
   url: http://www.changingthepresent.com/drives/rss
+  tag_finder: 
   last_accessed: <%= 1.day.ago %>
 
 fundable:
   name: Fundable
   url: http://www.fundable.org/search_rss?SearchableText=&portal_type%3Alist=GroupAction&review_state=public&review_state=private&sort_on=created&sort_order=descending
+  tag_finder: 
   last_accessed: <%= 1.day.ago %>
 
 bring_light:
   name: BringLight
   url: http://www.bringlight.com/feeds/all
+  tag_finder: 
   last_accessed: <%= 1.day.ago %>
 
 kiva:
   name: Kiva
   url: http://www.kiva.org/app.php?page=rss&action=businesses&status=fundRaising
+  tag_finder: 
   last_accessed: <%= 1.day.ago %>
 
 six_degrees:
   name: SixDegrees
   url: http://www.networkforgood.org/pca/badgefeed.aspx
+  tag_finder: 
   last_accessed: <%= 1.day.ago %>
 
 first_giving:
   name: Firstgiving
   url: http://feeds.firstgiving.com/rss/fundraisers/quickview.rss
+  tag_finder: 
   last_accessed: <%= 1.day.ago %>
