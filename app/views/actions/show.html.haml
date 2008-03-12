@@ -1,0 +1,22 @@
+%h1 Viewing action
+
+%div[current_object]
+  %h2= current_object.title
+  
+  .description
+    = current_object.description
+  
+  %p
+    Link:
+    = link_to current_object.url
+
+  .dates
+    Created:
+    = current_object.created_at
+
+  .platform
+    Source:
+    = link_to current_object.site.name, current_object.site.url, :popup => true
+  
+
+  %p= link_to 'Back', objects_path
