@@ -3,6 +3,7 @@ require 'simple-rss'
 require 'open-uri'
 
 class Feed < ActiveRecord::Base
+  belongs_to :site
   has_many :actions
 
   def parse    

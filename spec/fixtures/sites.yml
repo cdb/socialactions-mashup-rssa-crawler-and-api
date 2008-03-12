@@ -1,0 +1,59 @@
+global_giving:
+  name: GlobalGiving
+  url: http://www.globalgiving.com
+
+pledge_bank:
+  name: PledgeBank
+  url: http://www.pledgebank.com
+
+change_org:
+  name: Change.org Giving Networks
+  url: http://www.change.org
+
+razoo:
+  name: Razoo Acts
+  url: http://beta.razoo.com
+
+democracy_in_action:
+  name: DemocracyinAction
+  url: http://www.democracyinaction.org
+
+care_2_petitions:
+  name: Care2 Petitions
+  url: http://www.thepetitionsite.com
+
+# https is causing failing right now
+# the_point:
+#   name: ThePoint
+#   url: http://www.thepoint.com/rss
+# 
+#   last_accessed: <%= 1.day.ago %>
+
+give_meaning:
+  name: GiveMeaning
+  url: http://www.givemeaning.com
+
+changing_the_present:
+  name: ChangingthePresent
+  url: http://www.changingthepresent.com
+
+fundable:
+  name: Fundable
+  url: http://www.fundable.org
+
+bring_light:
+  name: BringLight
+  url: http://www.bringlight.com
+
+kiva:
+  name: Kiva
+  url: http://www.kiva.org
+
+six_degrees:
+  name: SixDegrees
+  url: http://www.networkforgood.org
+
+first_giving:
+  name: Firstgiving
+  url: http://www.firstgiving.com
+

@@ -1,0 +1,335 @@
+  [4;36;1mSQL (0.000198)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000137)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000148)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000142)[0m   [0mBEGIN[0m
+  [4;36;1mFeed Load (0.000418)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 517402238) [0m
+  [4;35;1mSQL (0.044134)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000198)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000157)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000149)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000153)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000170)[0m   [0mBEGIN[0m
+  [4;36;1mFeed Load (0.000448)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 517402238) [0m
+  [4;35;1mSQL (0.000189)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000177)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000154)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000148)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000248)[0m   [0mBEGIN[0m
+  [4;36;1mFeed Load (0.000457)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 517402238) [0m
+  [4;35;1mSQL (0.000192)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000156)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000161)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000167)[0m   [0mBEGIN[0m
+  [4;36;1mFeed Load (0.000443)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 517402238) [0m
+  [4;35;1mSQL (0.000231)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000152)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000129)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000164)[0m   [0mBEGIN[0m
+  [4;36;1mFeed Load (0.000436)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 517402238) [0m
+  [4;35;1mSQL (0.000189)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000149)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000153)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000161)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000167)[0m   [0mBEGIN[0m
+  [4;36;1mFeed Load (0.000420)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 517402238) [0m
+  [4;35;1mSQL (0.000219)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000138)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000153)[0m   [0mBEGIN[0m
+  [4;36;1mAction Columns (0.000000)[0m   [0;1mMysql::Error: Table 'socialactions_test.actions' doesn't exist: SHOW FIELDS FROM `actions`[0m
+  [4;35;1mSQL (0.000164)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000153)[0m   [0;1mBEGIN[0m
+  [4;35;1mAction Columns (0.000000)[0m   [0mMysql::Error: Table 'socialactions_test.actions' doesn't exist: SHOW FIELDS FROM `actions`[0m
+  [4;36;1mSQL (0.000137)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000261)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000177)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateActions (2)
+  [4;35;1mSQL (0.039499)[0m   [0mCREATE TABLE `actions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` text DEFAULT NULL, `url` varchar(255) DEFAULT NULL, `title` text DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000425)[0m   [0;1mUPDATE schema_info SET version = 2[0m
+  [4;35;1mSQL (0.000290)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to AddFeedIdToActions (3)
+  [4;36;1mSQL (0.053007)[0m   [0;1mALTER TABLE `actions` ADD `feed_id` int(11)[0m
+  [4;35;1mSQL (0.000352)[0m   [0mUPDATE schema_info SET version = 3[0m
+  [4;36;1mSQL (0.000292)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000434)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000507)[0m   [0;1mSHOW FIELDS FROM `actions`[0m
+  [4;35;1mSQL (0.000344)[0m   [0mdescribe `actions`[0m
+  [4;36;1mSQL (0.000417)[0m   [0;1mSHOW KEYS FROM `actions`[0m
+  [4;35;1mSQL (0.000352)[0m   [0mSHOW FIELDS FROM `feeds`[0m
+  [4;36;1mSQL (0.000347)[0m   [0;1mdescribe `feeds`[0m
+  [4;35;1mSQL (0.000441)[0m   [0mSHOW KEYS FROM `feeds`[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000104)[0m   [0mBEGIN[0m
+  [4;36;1mAction Columns (0.000306)[0m   [0;1mSHOW FIELDS FROM `actions`[0m
+  [4;35;1mSQL (0.000127)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000442)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000133)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000159)[0m   [0mBEGIN[0m
+  [4;36;1mAction Columns (0.000401)[0m   [0;1mSHOW FIELDS FROM `actions`[0m
+  [4;35;1mSQL (0.000160)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000171)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000245)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000154)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000152)[0m   [0mBEGIN[0m
+  [4;36;1mAction Columns (0.000451)[0m   [0;1mSHOW FIELDS FROM `actions`[0m
+  [4;35;1mSQL (0.000145)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000168)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000264)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000159)[0m   [0mBEGIN[0m
+  [4;36;1mAction Columns (0.000411)[0m   [0;1mSHOW FIELDS FROM `actions`[0m
+  [4;35;1mSQL (0.000147)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000170)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000159)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000162)[0m   [0mBEGIN[0m
+  [4;36;1mAction Columns (0.000419)[0m   [0;1mSHOW FIELDS FROM `actions`[0m
+  [4;35;1mSQL (0.000149)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000166)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000148)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000151)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000149)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000182)[0m   [0mBEGIN[0m
+  [4;36;1mFeed Load (0.000451)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 517402238) [0m
+  [4;35;1mAction Columns (0.000363)[0m   [0mSHOW FIELDS FROM `actions`[0m
+  [4;36;1mAction Load (0.000389)[0m   [0;1mSELECT * FROM `actions` WHERE (actions.feed_id = 517402238) AND (`actions`.`url` = 'http://feeds.feedburner.com/~r/GlobalGivingProjects/~3/247765297/proj2032a.html') LIMIT 1[0m
+  [4;35;1mAction Create (0.000260)[0m   [0mINSERT INTO `actions` (`updated_at`, `title`, `url`, `description`, `feed_id`, `created_at`) VALUES('2008-03-09 22:20:48', NULL, 'http://feeds.feedburner.com/~r/GlobalGivingProjects/~3/247765297/proj2032a.html', NULL, 517402238, '2008-03-09 22:20:48')[0m
+  [4;36;1mAction Update (0.000453)[0m   [0;1mUPDATE `actions` SET `created_at` = '2008-03-09 22:20:48', `title` = 'Education for 5000 Families of Sick Babies in US', `feed_id` = 517402238, `description` = '<table cellspacing=\"5\"><tr><td valign=\"top\"><img border=\"0\" alt=\"project picture\" src=\"http://www.globalgiving.com/pfil/2032/pict.jpg\" width=\"176\" height=\"114\" align=\"middle\" style=\"margin-top: 5px;\"/><br/></td><td valign=\"top\"><b>$10&amp;nbsp;&amp;mdash;</b>&amp;nbsp;Will provide materials and support to a NICU family<br><b>$50&amp;nbsp;&amp;mdash;</b>&amp;nbsp;Will provide materials and support to 5 NICU families<br><b>$100&amp;nbsp;&amp;mdash;</b>&amp;nbsp;Will provide materials and support to 10 NICU families<br><br><a href=\"http://www.globalgiving.com/pr/2100/proj2032a.html\"><img border=\"0\" src=\"http://www.globalgiving.com/img/buttons/give_now.gif\" alt=\"give now\"/></a></td></tr></table><br><b>Summary</b><br>This project provides educational materials and support to 5000 families whose babies are struggling in the neonatal intensive care unit (NICU).<br><br><b>Project Needs and Beneficiaries</b><br>March of Dimes NICU Family Support programs, located in all 50 states plus the District of Columbia and Puerto Rico, offers information and education to parents experiencing difficulties at the beginning of their baby\'s life. Many babies arrived too soon and/or have life-threatening complications. Few parents are prepared for these unforeseen circumstances, leaving many questions unanswered.<br><br><b>Activities</b><br>Parent care kits and other materials provide plain language answers as to what to expect during a difficult time, enabling parents to take care of and for, as well as create a bond with, their struggling baby in the neonatal intensve care unit.<br><br><b>Potential Long Term Impact</b><br>The overall NICU Family Support project will provide support and answers to almost 30,000 families this year better enabling them to deal with their baby\'s stay in the NICU and transition their baby to home.<br><br><b>Project Message</b><br>&amp;quot;I thank the March of Dimes from the bottom of my heart for NICU Family Support. It has helped parents of our babies to BE parents while the babies are still in the unit.&amp;quot;<br> - Elayne McNamara, NICU Occupational Therapist, Shands Hospital<br><br><b>Project Sponsor: </b>March of Dimes<br><b>Theme: </b>Health | <b>Location:</b> United States<br><b>Funding to Date:</b> $0 | <b>Need:</b>$50,000</font><br><a href=\"http://www.globalgiving.com/pr/2100/proj2032a.html\">Project #2032</a> on <a href=\"http://www.globalgiving.com\">GlobalGiving.com</a><div class=\"feedflare\">\r\n<a href=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?a=zLpsMJF\"><img src=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?i=zLpsMJF\" border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?a=kucIONf\"><img src=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?i=kucIONf\" border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?a=ZhEePyf\"><img src=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?i=ZhEePyf\" border=\"0\"></img></a>\r\n</div><img src=\"http://feeds.feedburner.com/~r/GlobalGivingProjects/~4/247765297\" height=\"1\" width=\"1\"/>', `updated_at` = '2008-03-09 22:20:48', `url` = 'http://feeds.feedburner.com/~r/GlobalGivingProjects/~3/247765297/proj2032a.html' WHERE `id` = 1[0m
+  [4;35;1mAction Load (0.000317)[0m   [0mSELECT * FROM `actions` WHERE (actions.feed_id = 517402238) AND (`actions`.`url` = 'http://feeds.feedburner.com/~r/GlobalGivingProjects/~3/238607982/proj2012a.html') LIMIT 1[0m
+  [4;36;1mAction Create (0.000200)[0m   [0;1mINSERT INTO `actions` (`updated_at`, `title`, `url`, `description`, `feed_id`, `created_at`) VALUES('2008-03-09 22:20:48', NULL, 'http://feeds.feedburner.com/~r/GlobalGivingProjects/~3/238607982/proj2012a.html', NULL, 517402238, '2008-03-09 22:20:48')[0m
+  [4;35;1mAction Update (0.000488)[0m   [0mUPDATE `actions` SET `created_at` = '2008-03-09 22:20:48', `title` = 'Microfinance For Disadvantaged Laos Farmers', `feed_id` = 517402238, `description` = '<table cellspacing=\"5\"><tr><td valign=\"top\"><img border=\"0\" alt=\"project picture\" src=\"http://www.globalgiving.com/pfil/2012/pict.jpg\" width=\"176\" height=\"114\" align=\"middle\" style=\"margin-top: 5px;\"/><br/></td><td valign=\"top\"><b>$30&amp;nbsp;&amp;mdash;</b>&amp;nbsp;One villager will receive seedlings, information and assistance to start their own small plantation or cash crop.<br><b>$100&amp;nbsp;&amp;mdash;</b>&amp;nbsp;Takes two farmers on a study tour to Thailand to gain knowledge of different forms of agriculture and chemical fertilizer vs organic processes, so that agriculture in Laos can remain natural. <br><b>$250&amp;nbsp;&amp;mdash;</b>&amp;nbsp;Helps create an extended training program to teach farmers about the science of agriculture and give them new skills in plantations, cash crops, growing seedlings and running a nursery. <br><br><a href=\"http://www.globalgiving.com/pr/2100/proj2012a.html\"><img border=\"0\" src=\"http://www.globalgiving.com/img/buttons/give_now.gif\" alt=\"give now\"/></a></td></tr></table><br><b>Summary</b><br>Empowering men and women through agricultural development, help SEDA transform 24,725 acres of unused village land into a source of sustainable income for poor farmers in rural Laos.<br><br><b>Project Needs and Beneficiaries</b><br>In a rural backdrop six hours from Vientiane lies a small community of farmers and villagers struggling to survive. Their land was cleared years ago for timber and left without economic benefit. Through SEDA and microfinance, they want to create prospering farms to sustain their community for future generations. In addition to financial assistance, these villagers need to know they can receive fair trade for produce, have access to services and raw materials, clean water and farming information.<br><br><b>Activities</b><br>This project involves working with farmers to plant Jatropha Curas (green energy) on 9000 acres, establish a producer cooperative, marketing strategy and water storage plan - with the remaining land to be used for herbs, rice and conservation.<br><br><b>Potential Long Term Impact</b><br>Introducing this microfinance program to farmers in poverty will create sustainable change for the community in question and generate useful lessons, which can then be applied to similar communities throughout Laos.<br><br><b>Project Message</b><br>Helping disadvantaged farming men and women achieve financial success today, means a brighter future for Laos tomorrow - one where your support created change and the catalyst for improvement.<br> - Ms. Souly QuachAngkham, Founder of SEDA-Laos<br><br><b>Project Sponsor: </b>Social and Economic Developers\' Association (SEDA)<br><b>Theme: </b>Economic Development | <b>Location:</b> Laos<br><b>Funding to Date:</b> $100 | <b>Need:</b>$35,000</font><br><a href=\"http://www.globalgiving.com/pr/2100/proj2012a.html\">Project #2012</a> on <a href=\"http://www.globalgiving.com\">GlobalGiving.com</a><div class=\"feedflare\">\r\n<a href=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?a=c7M1HiE\"><img src=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?i=c7M1HiE\" border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?a=htuvzOe\"><img src=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?i=htuvzOe\" border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?a=LPnxhBe\"><img src=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?i=LPnxhBe\" border=\"0\"></img></a>\r\n</div><img src=\"http://feeds.feedburner.com/~r/GlobalGivingProjects/~4/238607982\" height=\"1\" width=\"1\"/>', `updated_at` = '2008-03-09 22:20:48', `url` = 'http://feeds.feedburner.com/~r/GlobalGivingProjects/~3/238607982/proj2012a.html' WHERE `id` = 2[0m
+  [4;36;1mAction Load (0.000332)[0m   [0;1mSELECT * FROM `actions` WHERE (actions.feed_id = 517402238) AND (`actions`.`url` = 'http://feeds.feedburner.com/~r/GlobalGivingProjects/~3/245939222/proj2022a.html') LIMIT 1[0m
+  [4;35;1mAction Create (0.000181)[0m   [0mINSERT INTO `actions` (`updated_at`, `title`, `url`, `description`, `feed_id`, `created_at`) VALUES('2008-03-09 22:20:48', NULL, 'http://feeds.feedburner.com/~r/GlobalGivingProjects/~3/245939222/proj2022a.html', NULL, 517402238, '2008-03-09 22:20:48')[0m
+  [4;36;1mAction Update (0.000339)[0m   [0;1mUPDATE `actions` SET `created_at` = '2008-03-09 22:20:48', `title` = 'Help 1000 farmers start a community business', `feed_id` = 517402238, `description` = '<table cellspacing=\"5\"><tr><td valign=\"top\"><img border=\"0\" alt=\"project picture\" src=\"http://www.globalgiving.com/pfil/2022/pict.jpg\" width=\"176\" height=\"114\" align=\"middle\" style=\"margin-top: 5px;\"/><br/></td><td valign=\"top\"><b>$50&amp;nbsp;&amp;mdash;</b>&amp;nbsp;Sponsor 10 families to participate<br><b>$250&amp;nbsp;&amp;mdash;</b>&amp;nbsp;Pay for Mill Construction Cost<br><b>$500&amp;nbsp;&amp;mdash;</b>&amp;nbsp;Pay for Machinery Installation<br><br><a href=\"http://www.globalgiving.com/pr/2100/proj2022a.html\"><img border=\"0\" src=\"http://www.globalgiving.com/img/buttons/give_now.gif\" alt=\"give now\"/></a></td></tr></table><br><b>Summary</b><br>The creation of a cooperative dal (lentil) processing business to be owned by local farmers. This market-based intervention stands to improve incomes 50 % for over 1,000 tribal families.<br><br><b>Project Needs and Beneficiaries</b><br>Seva Mandir (SM) works with aboriginal people in Southern Rajasthan. Dals (lentils) are grown extensively in this area and sold in raw form, but socially marginalized farmers are systematically exploited by wealthy intermediaries such as upper caste traders and large corporations. As a result, farmers ultimately receive less than 1/3 of the retail price for processed dals. Almost all beneficiaries of this project live in extreme poverty (&amp;lt;$1 / day).<br><br><b>Activities</b><br>By processing dals locally, impoverished farmers will receive more equitable returns for their hard work. This is a viable business proposition and thus self-sustaining once the mill is set up.<br><br><b>Potential Long Term Impact</b><br>Your donation will immediately enable a highly impoverished community to get fair returns for their hard work. In a larger sense, you are helping to empower a disadvantaged community of aboriginal people to dream bigger than they ever have before.<br><br><b>Project Message</b><br>Progress in rural India will be limited until new industry comes forth for the benefit of farming communities.<br> - Arun Gupta, America India Foundation Fellow<br><br><b>Project Sponsor: </b>Seva Mandir<br><b>Theme: </b>Economic Development | <b>Location:</b> India<br><b>Funding to Date:</b> $0 | <b>Need:</b>$6,000</font><br><a href=\"http://www.globalgiving.com/pr/2100/proj2022a.html\">Project #2022</a> on <a href=\"http://www.globalgiving.com\">GlobalGiving.com</a><div class=\"feedflare\">\r\n<a href=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?a=bSa0oXF\"><img src=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?i=bSa0oXF\" border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?a=VZaeOyf\"><img src=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?i=VZaeOyf\" border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?a=37K3d8f\"><img src=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?i=37K3d8f\" border=\"0\"></img></a>\r\n</div><img src=\"http://feeds.feedburner.com/~r/GlobalGivingProjects/~4/245939222\" height=\"1\" width=\"1\"/>', `updated_at` = '2008-03-09 22:20:48', `url` = 'http://feeds.feedburner.com/~r/GlobalGivingProjects/~3/245939222/proj2022a.html' WHERE `id` = 3[0m
+  [4;35;1mAction Load (0.000291)[0m   [0mSELECT * FROM `actions` WHERE (actions.feed_id = 517402238) AND (`actions`.`url` = 'http://feeds.feedburner.com/~r/GlobalGivingProjects/~3/247196643/proj1664a.html') LIMIT 1[0m
+  [4;36;1mAction Create (0.000168)[0m   [0;1mINSERT INTO `actions` (`updated_at`, `title`, `url`, `description`, `feed_id`, `created_at`) VALUES('2008-03-09 22:20:48', NULL, 'http://feeds.feedburner.com/~r/GlobalGivingProjects/~3/247196643/proj1664a.html', NULL, 517402238, '2008-03-09 22:20:48')[0m
+  [4;35;1mAction Update (0.000335)[0m   [0mUPDATE `actions` SET `created_at` = '2008-03-09 22:20:48', `title` = 'Stop the polio outbreak in India', `feed_id` = 517402238, `description` = '<table cellspacing=\"5\"><tr><td valign=\"top\"><img border=\"0\" alt=\"project picture\" src=\"http://www.globalgiving.com/pfil/1664/pict.jpg\" width=\"176\" height=\"114\" align=\"middle\" style=\"margin-top: 5px;\"/><br/></td><td valign=\"top\"><b>$25&amp;nbsp;&amp;mdash;</b>&amp;nbsp;provides 30 banners to help communicate when and where the immunizations will occur<br><b>$150&amp;nbsp;&amp;mdash;</b>&amp;nbsp;provides aprons to identify 250 health workers, volunteers and vaccinators<br><b>$300&amp;nbsp;&amp;mdash;</b>&amp;nbsp;provides 25,000 Indian children a reward for being vaccinated and encourage future participation<br><br><a href=\"http://www.globalgiving.com/pr/1700/proj1664a.html\"><img border=\"0\" src=\"http://www.globalgiving.com/img/buttons/give_now.gif\" alt=\"give now\"/></a></td></tr></table><br><b>Summary</b><br>This project provides funding for essential social mobilization items needed to conduct high-quality polio immunization in India including media, posters, advertisements and volunteer caps and aprons.<br><br><b>Project Needs and Beneficiaries</b><br>While most areas of India are today polio-free, a new outbreak centered in and around the Moradabad district, western Uttar Pradesh, is increasing the risk of further national and international spread of polio. Specific actions are being taken to urgently address the outbreak, including conducting large-scale polio immunization activities. To be successful, social mobilization tools are needed. These tools are provided by PolioPlus Partners.<br><br><b>Activities</b><br>COMMUNICATE when and where polio immunization activities will occur with advertisements, media and posters. IDENTIFY health workers and volunteers with caps and aprons. REWARD children and parents with incentives to encourage participation.<br><br><b>Potential Long Term Impact</b><br>The project will help educate millions of Indian families on how to protect their children from contracting polio, and will provide essential tools to thousands of volunteers and health workers to conduct high-quality polio immunization activities.<br><br><b>Project Message</b><br>&amp;quot;If polio is not eradicated, it\'ll come back as strongly as it ever has in the past. No child anywhere in the world will be safe.&amp;quot;<br> - Deepak Kapur, Chairman Rotary India National PolioPlus Committee<br><br><b>Project Sponsor: </b>The Rotary Foundation, Rotary International<br><b>Theme: </b>Health | <b>Location:</b> India<br><b>Funding to Date:</b> $455 | <b>Need:</b>$419,582</font><br><a href=\"http://www.globalgiving.com/pr/1700/proj1664a.html\">Project #1664</a> on <a href=\"http://www.globalgiving.com\">GlobalGiving.com</a><div class=\"feedflare\">\r\n<a href=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?a=T5FDHrF\"><img src=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?i=T5FDHrF\" border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?a=A005xHf\"><img src=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?i=A005xHf\" border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?a=l9Ynqwf\"><img src=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?i=l9Ynqwf\" border=\"0\"></img></a>\r\n</div><img src=\"http://feeds.feedburner.com/~r/GlobalGivingProjects/~4/247196643\" height=\"1\" width=\"1\"/>', `updated_at` = '2008-03-09 22:20:48', `url` = 'http://feeds.feedburner.com/~r/GlobalGivingProjects/~3/247196643/proj1664a.html' WHERE `id` = 4[0m
+  [4;36;1mAction Load (0.000296)[0m   [0;1mSELECT * FROM `actions` WHERE (actions.feed_id = 517402238) AND (`actions`.`url` = 'http://feeds.feedburner.com/~r/GlobalGivingProjects/~3/245939218/proj2029a.html') LIMIT 1[0m
+  [4;35;1mAction Create (0.000201)[0m   [0mINSERT INTO `actions` (`updated_at`, `title`, `url`, `description`, `feed_id`, `created_at`) VALUES('2008-03-09 22:20:48', NULL, 'http://feeds.feedburner.com/~r/GlobalGivingProjects/~3/245939218/proj2029a.html', NULL, 517402238, '2008-03-09 22:20:48')[0m
+  [4;36;1mAction Update (0.000551)[0m   [0;1mUPDATE `actions` SET `created_at` = '2008-03-09 22:20:48', `title` = 'Early Arrival: Bonding in the NICU', `feed_id` = 517402238, `description` = '<table cellspacing=\"5\"><tr><td valign=\"top\"><img border=\"0\" alt=\"project picture\" src=\"http://www.globalgiving.com/pfil/2029/pict.jpg\" width=\"176\" height=\"114\" align=\"middle\" style=\"margin-top: 5px;\"/><br/></td><td valign=\"top\"><b>$30&amp;nbsp;&amp;mdash;</b>&amp;nbsp;20 copies of the booklet in English or Spanish<br><b>$60&amp;nbsp;&amp;mdash;</b>&amp;nbsp;40 copies of the booklet in English or Spanish<br><b>$90&amp;nbsp;&amp;mdash;</b>&amp;nbsp;60 copies of the booklet in English or Spanish<br><br><a href=\"http://www.globalgiving.com/pr/2100/proj2029a.html\"><img border=\"0\" src=\"http://www.globalgiving.com/img/buttons/give_now.gif\" alt=\"give now\"/></a></td></tr></table><br><b>Summary</b><br>This booklet, in English and Spanish, describes ways parents of preterm babies can bond with and care for their baby while in the NICU. Your donation puts this resource into the hands of 20 parents.<br><br><b>Project Needs and Beneficiaries</b><br>One out of every eight babies in the US is born prematurely. Babies spend days, weeks, and even months in the Neonatal Intensive Care Unit (NICU). This can be a very stressful time for parents. This booklet helps parents build strong relationships with their premature babies which builds a solid social-emotional foundation.<br><br><b>Activities</b><br>By providing free booklets in English and Spanish in take-home hospital gift baskets, at clinics and at pediatrician\'s offices, we can help parents with preterm babies understand the many ways they can care for and bond with their new child.<br><br><b>Potential Long Term Impact</b><br>This booklet will help 20 parents of preterm babies form strong bonds with their new baby in the NICU and when he or she comes home which nurtures the baby&amp;#146;s healthy overall growth and development.<br><br><b>Project Message</b><br>The brochure [Early Arrival] is really wonderful..and will be very helpful to parents (and also to NICU caregivers)Congraulations on this much needed and fine product.<br> - Heidelise Als, PhD, Harvard University<br><br><b>Project Sponsor: </b>ZERO TO THREE<br><b>Theme: </b>Education | <b>Location:</b> United States<br><b>Funding to Date:</b> $0 | <b>Need:</b>$20,000</font><br><a href=\"http://www.globalgiving.com/pr/2100/proj2029a.html\">Project #2029</a> on <a href=\"http://www.globalgiving.com\">GlobalGiving.com</a><div class=\"feedflare\">\r\n<a href=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?a=H04PtpF\"><img src=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?i=H04PtpF\" border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?a=WDlU3Xf\"><img src=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?i=WDlU3Xf\" border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?a=h8KF6pf\"><img src=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?i=h8KF6pf\" border=\"0\"></img></a>\r\n</div><img src=\"http://feeds.feedburner.com/~r/GlobalGivingProjects/~4/245939218\" height=\"1\" width=\"1\"/>', `updated_at` = '2008-03-09 22:20:48', `url` = 'http://feeds.feedburner.com/~r/GlobalGivingProjects/~3/245939218/proj2029a.html' WHERE `id` = 5[0m
+  [4;35;1mAction Load (0.000360)[0m   [0mSELECT * FROM `actions` WHERE (actions.feed_id = 517402238) AND (`actions`.`url` = 'http://feeds.feedburner.com/~r/GlobalGivingProjects/~3/245939219/proj2030a.html') LIMIT 1[0m
+  [4;36;1mAction Create (0.000201)[0m   [0;1mINSERT INTO `actions` (`updated_at`, `title`, `url`, `description`, `feed_id`, `created_at`) VALUES('2008-03-09 22:20:48', NULL, 'http://feeds.feedburner.com/~r/GlobalGivingProjects/~3/245939219/proj2030a.html', NULL, 517402238, '2008-03-09 22:20:48')[0m
+  [4;35;1mAction Update (0.000363)[0m   [0mUPDATE `actions` SET `created_at` = '2008-03-09 22:20:48', `title` = 'Helping Children Survive to 5 in Bolivia', `feed_id` = 517402238, `description` = '<table cellspacing=\"5\"><tr><td valign=\"top\"><img border=\"0\" alt=\"project picture\" src=\"http://www.globalgiving.com/pfil/2030/pict.jpg\" width=\"176\" height=\"114\" align=\"middle\" style=\"margin-top: 5px;\"/><br/></td><td valign=\"top\"><b>$25&amp;nbsp;&amp;mdash;</b>&amp;nbsp;Trains a community health worker to treat 50 children.<br><b>$50&amp;nbsp;&amp;mdash;</b>&amp;nbsp;Trains a community health worker to treat 100 children.<br><b>$100&amp;nbsp;&amp;mdash;</b>&amp;nbsp;Trains a community health worker to treat 200 children<br><br><a href=\"http://www.globalgiving.com/pr/2100/proj2030a.html\"><img border=\"0\" src=\"http://www.globalgiving.com/img/buttons/give_now.gif\" alt=\"give now\"/></a></td></tr></table><br><b>Summary</b><br>Help children in Bolivia survive to age 5 by training community health workers to diagnose common illnesses, deliver basic medical treatment and promote better health practices.<br><br><b>Project Needs and Beneficiaries</b><br>In Bolivia, 17,000 children under 5 die each year from preventable or treatable illnessess like pneumonia and diarrhea -- often because health clinics are remote and inaccessible. Save the Children\'s solution is to deliver health services where people live -- through community health workers who we train and equip to provide appropriate care locally. This project makes lifesaving health services more available to parents and forever changes a community\'s ability to care for its children.<br><br><b>Activities</b><br>Train health workers to diagnose and treat common illnesses and equip them with supplies including antibiotics and timer watch (for pneumonia) and rehydration salts and zinc (for diarrhea).<br><br><b>Potential Long Term Impact</b><br>The project will increase access to lifesaving care for thousands of Bolivian children and reduce child mortality rates. Through training community health workers to prevent and treat illnesses, we offer communities long lasting health resources.<br><br><b>Project Message</b><br>&amp;#147;The Survive to 5 campaign has the potential to change the future for millions of children. The idea behind Survive to 5 is that we need to raise more than money. We need to raise our voices too.&amp;#148;<br> - Melinda French Gates, Melinda French Gates, head of the Gates Foundation<br><br><b>Project Sponsor: </b>Save the Children Federation<br><b>Theme: </b>Health | <b>Location:</b> Bolivia<br><b>Funding to Date:</b> $125 | <b>Need:</b>$11,300</font><br><a href=\"http://www.globalgiving.com/pr/2100/proj2030a.html\">Project #2030</a> on <a href=\"http://www.globalgiving.com\">GlobalGiving.com</a><div class=\"feedflare\">\r\n<a href=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?a=jEmXzKF\"><img src=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?i=jEmXzKF\" border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?a=d0HZejf\"><img src=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?i=d0HZejf\" border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?a=5wrSrAf\"><img src=\"http://feeds.feedburner.com/~f/GlobalGivingProjects?i=5wrSrAf\" border=\"0\"></img></a>\r\n</div><img src=\"http://feeds.feedburner.com/~r/GlobalGivingProjects/~4/245939219\" height=\"1\" width=\"1\"/>', `updated_at` = '2008-03-09 22:20:48', `url` = 'http://feeds.feedburner.com/~r/GlobalGivingProjects/~3/245939219/proj2030a.html' WHERE `id` = 6[0m
+  [4;36;1mSQL (0.050684)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000152)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000167)[0m   [0mBEGIN[0m
+  [4;36;1mAction Columns (0.000406)[0m   [0;1mSHOW FIELDS FROM `actions`[0m
+  [4;35;1mSQL (0.000168)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000208)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000241)[0m   [0;1mBEGIN[0m
+  [4;35;1mTagging Columns (0.000000)[0m   [0mMysql::Error: Table 'socialactions_test.taggings' doesn't exist: SHOW FIELDS FROM `taggings`[0m
+  [4;36;1mSQL (0.000120)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000148)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.034507)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000319)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000281)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000246)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to ActsAsTaggableMigration (4)
+  [4;35;1mSQL (0.002987)[0m   [0mCREATE TABLE `tags` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.020031)[0m   [0;1mCREATE TABLE `taggings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `tag_id` int(11) DEFAULT NULL, `taggable_id` int(11) DEFAULT NULL, `taggable_type` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.036693)[0m   [0mCREATE INDEX `index_taggings_on_tag_id` ON `taggings` (`tag_id`)[0m
+  [4;36;1mSQL (0.038633)[0m   [0;1mCREATE INDEX `index_taggings_on_taggable_id_and_taggable_type` ON `taggings` (`taggable_id`, `taggable_type`)[0m
+  [4;35;1mSQL (0.014011)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000468)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000492)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000386)[0m   [0;1mSHOW FIELDS FROM `actions`[0m
+  [4;35;1mSQL (0.000373)[0m   [0mdescribe `actions`[0m
+  [4;36;1mSQL (0.000470)[0m   [0;1mSHOW KEYS FROM `actions`[0m
+  [4;35;1mSQL (0.000374)[0m   [0mSHOW FIELDS FROM `feeds`[0m
+  [4;36;1mSQL (0.000443)[0m   [0;1mdescribe `feeds`[0m
+  [4;35;1mSQL (0.000542)[0m   [0mSHOW KEYS FROM `feeds`[0m
+  [4;36;1mSQL (0.000526)[0m   [0;1mSHOW FIELDS FROM `taggings`[0m
+  [4;35;1mSQL (0.069877)[0m   [0mdescribe `taggings`[0m
+  [4;36;1mSQL (0.000597)[0m   [0;1mSHOW KEYS FROM `taggings`[0m
+  [4;35;1mSQL (0.000481)[0m   [0mSHOW FIELDS FROM `tags`[0m
+  [4;36;1mSQL (0.056640)[0m   [0;1mdescribe `tags`[0m
+  [4;35;1mSQL (0.000499)[0m   [0mSHOW KEYS FROM `tags`[0m
+  [4;36;1mSQL (0.000152)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000157)[0m   [0mBEGIN[0m
+  [4;36;1mAction Columns (0.000408)[0m   [0;1mSHOW FIELDS FROM `actions`[0m
+  [4;35;1mSQL (0.000156)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000179)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000152)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000204)[0m   [0;1mBEGIN[0m
+  [4;35;1mTagging Columns (0.000357)[0m   [0mSHOW FIELDS FROM `taggings`[0m
+  [4;36;1mSQL (0.000132)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000149)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000158)[0m   [0mBEGIN[0m
+  [4;36;1mAction Columns (0.000401)[0m   [0;1mSHOW FIELDS FROM `actions`[0m
+  [4;35;1mSQL (0.000136)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000217)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000158)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mBEGIN[0m
+  [4;35;1mTagging Columns (0.000368)[0m   [0mSHOW FIELDS FROM `taggings`[0m
+  [4;36;1mSQL (0.000149)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000204)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000165)[0m   [0mBEGIN[0m
+  [4;36;1mAction Columns (0.000413)[0m   [0;1mSHOW FIELDS FROM `actions`[0m
+  [4;35;1mSQL (0.000154)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000178)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000164)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mBEGIN[0m
+  [4;35;1mTagging Columns (0.000349)[0m   [0mSHOW FIELDS FROM `taggings`[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000153)[0m   [0mBEGIN[0m
+  [4;36;1mAction Columns (0.000442)[0m   [0;1mSHOW FIELDS FROM `actions`[0m
+  [4;35;1mSQL (0.000149)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000174)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000245)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000150)[0m   [0;1mBEGIN[0m
+  [4;35;1mTagging Columns (0.000400)[0m   [0mSHOW FIELDS FROM `taggings`[0m
+  [4;36;1mSQL (0.000307)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000149)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000156)[0m   [0mBEGIN[0m
+  [4;36;1mAction Columns (0.000399)[0m   [0;1mSHOW FIELDS FROM `actions`[0m
+  [4;35;1mSQL (0.000129)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000173)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000179)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mBEGIN[0m
+  [4;35;1mTagging Columns (0.000393)[0m   [0mSHOW FIELDS FROM `taggings`[0m
+  [4;36;1mAction Create (0.000292)[0m   [0;1mINSERT INTO `actions` (`updated_at`, `title`, `url`, `description`, `feed_id`, `created_at`) VALUES('2008-03-09 22:23:32', NULL, NULL, NULL, NULL, '2008-03-09 22:23:32')[0m
+  [4;35;1mTag Load (0.000308)[0m   [0mSELECT * FROM `tags` WHERE (name LIKE 'Something') LIMIT 1[0m
+  [4;36;1mTag Columns (0.000229)[0m   [0;1mSHOW FIELDS FROM `tags`[0m
+  [4;35;1mTag Load (0.000228)[0m   [0mSELECT * FROM `tags` WHERE (tags.name = 'Something') LIMIT 1[0m
+  [4;36;1mTag Create (0.000202)[0m   [0;1mINSERT INTO `tags` (`name`) VALUES('Something')[0m
+  [4;35;1mTagging Create (0.000234)[0m   [0mINSERT INTO `taggings` (`tag_id`, `taggable_type`, `taggable_id`, `created_at`) VALUES(1, 'Action', 7, '2008-03-09 22:23:32')[0m
+  [4;36;1mTag Load (0.000226)[0m   [0;1mSELECT * FROM `tags` WHERE (name LIKE 'OrOther') LIMIT 1[0m
+  [4;35;1mTag Load (0.000216)[0m   [0mSELECT * FROM `tags` WHERE (tags.name = 'OrOther') LIMIT 1[0m
+  [4;36;1mTag Create (0.000170)[0m   [0;1mINSERT INTO `tags` (`name`) VALUES('OrOther')[0m
+  [4;35;1mTagging Create (0.000185)[0m   [0mINSERT INTO `taggings` (`tag_id`, `taggable_type`, `taggable_id`, `created_at`) VALUES(2, 'Action', 7, '2008-03-09 22:23:32')[0m
+  [4;36;1mSQL (0.000826)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000150)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000156)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000274)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000180)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000177)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000176)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000176)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to AddTagFinderToFeeds (5)
+  [4;36;1mSQL (0.299719)[0m   [0;1mALTER TABLE `feeds` ADD `tag_finder` varchar(255)[0m
+  [4;35;1mSQL (0.000463)[0m   [0mUPDATE schema_info SET version = 5[0m
+  [4;36;1mSQL (0.000307)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000476)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000386)[0m   [0;1mSHOW FIELDS FROM `actions`[0m
+  [4;35;1mSQL (0.000403)[0m   [0mdescribe `actions`[0m
+  [4;36;1mSQL (0.000447)[0m   [0;1mSHOW KEYS FROM `actions`[0m
+  [4;35;1mSQL (0.000536)[0m   [0mSHOW FIELDS FROM `feeds`[0m
+  [4;36;1mSQL (0.000383)[0m   [0;1mdescribe `feeds`[0m
+  [4;35;1mSQL (0.000460)[0m   [0mSHOW KEYS FROM `feeds`[0m
+  [4;36;1mSQL (0.000362)[0m   [0;1mSHOW FIELDS FROM `taggings`[0m
+  [4;35;1mSQL (0.000357)[0m   [0mdescribe `taggings`[0m
+  [4;36;1mSQL (0.000500)[0m   [0;1mSHOW KEYS FROM `taggings`[0m
+  [4;35;1mSQL (0.000329)[0m   [0mSHOW FIELDS FROM `tags`[0m
+  [4;36;1mSQL (0.000325)[0m   [0;1mdescribe `tags`[0m
+  [4;35;1mSQL (0.000427)[0m   [0mSHOW KEYS FROM `tags`[0m
+  [4;36;1mSQL (0.000149)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000155)[0m   [0mBEGIN[0m
+  [4;36;1mAction Columns (0.000418)[0m   [0;1mSHOW FIELDS FROM `actions`[0m
+  [4;35;1mSQL (0.000150)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.037616)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000224)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mBEGIN[0m
+  [4;35;1mTagging Columns (0.000317)[0m   [0mSHOW FIELDS FROM `taggings`[0m
+  [4;36;1mAction Create (0.000253)[0m   [0;1mINSERT INTO `actions` (`updated_at`, `title`, `url`, `description`, `feed_id`, `created_at`) VALUES('2008-03-09 22:27:23', NULL, NULL, NULL, NULL, '2008-03-09 22:27:23')[0m
+  [4;35;1mTag Load (0.000273)[0m   [0mSELECT * FROM `tags` WHERE (name LIKE 'Something') LIMIT 1[0m
+  [4;36;1mTag Columns (0.000223)[0m   [0;1mSHOW FIELDS FROM `tags`[0m
+  [4;35;1mTag Load (0.000226)[0m   [0mSELECT * FROM `tags` WHERE (tags.name = 'Something') LIMIT 1[0m
+  [4;36;1mTag Create (0.000201)[0m   [0;1mINSERT INTO `tags` (`name`) VALUES('Something')[0m
+  [4;35;1mTagging Create (0.000205)[0m   [0mINSERT INTO `taggings` (`tag_id`, `taggable_type`, `taggable_id`, `created_at`) VALUES(3, 'Action', 8, '2008-03-09 22:27:23')[0m
+  [4;36;1mTag Load (0.000231)[0m   [0;1mSELECT * FROM `tags` WHERE (name LIKE 'OrOther') LIMIT 1[0m
+  [4;35;1mTag Load (0.000216)[0m   [0mSELECT * FROM `tags` WHERE (tags.name = 'OrOther') LIMIT 1[0m
+  [4;36;1mTag Create (0.000173)[0m   [0;1mINSERT INTO `tags` (`name`) VALUES('OrOther')[0m
+  [4;35;1mTagging Create (0.000187)[0m   [0mINSERT INTO `taggings` (`tag_id`, `taggable_type`, `taggable_id`, `created_at`) VALUES(4, 'Action', 8, '2008-03-09 22:27:23')[0m
+  [4;36;1mSQL (0.008901)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000175)[0m   [0mBEGIN[0m
+  [4;36;1mAction Create (0.000308)[0m   [0;1mINSERT INTO `actions` (`updated_at`, `title`, `url`, `description`, `feed_id`, `created_at`) VALUES('2008-03-09 22:27:23', NULL, NULL, 'Test hello <br />Tags: Something, OrOther<br /> world', NULL, '2008-03-09 22:27:23')[0m
+  [4;35;1mSQL (0.000810)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000193)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000161)[0m   [0mBEGIN[0m
+  [4;36;1mAction Columns (0.000417)[0m   [0;1mSHOW FIELDS FROM `actions`[0m
+  [4;35;1mSQL (0.000149)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000230)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000157)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000104)[0m   [0;1mBEGIN[0m
+  [4;35;1mTagging Columns (0.000331)[0m   [0mSHOW FIELDS FROM `taggings`[0m
+  [4;36;1mAction Create (0.000289)[0m   [0;1mINSERT INTO `actions` (`updated_at`, `title`, `url`, `description`, `feed_id`, `created_at`) VALUES('2008-03-09 22:59:28', NULL, NULL, NULL, NULL, '2008-03-09 22:59:28')[0m
+  [4;35;1mTag Load (0.000311)[0m   [0mSELECT * FROM `tags` WHERE (name LIKE 'Something') LIMIT 1[0m
+  [4;36;1mTag Columns (0.000233)[0m   [0;1mSHOW FIELDS FROM `tags`[0m
+  [4;35;1mTag Load (0.000228)[0m   [0mSELECT * FROM `tags` WHERE (tags.name = 'Something') LIMIT 1[0m
+  [4;36;1mTag Create (0.000197)[0m   [0;1mINSERT INTO `tags` (`name`) VALUES('Something')[0m
+  [4;35;1mTagging Create (0.000239)[0m   [0mINSERT INTO `taggings` (`tag_id`, `taggable_type`, `taggable_id`, `created_at`) VALUES(5, 'Action', 10, '2008-03-09 22:59:28')[0m
+  [4;36;1mTag Load (0.000250)[0m   [0;1mSELECT * FROM `tags` WHERE (name LIKE 'OrOther') LIMIT 1[0m
+  [4;35;1mTag Load (0.000218)[0m   [0mSELECT * FROM `tags` WHERE (tags.name = 'OrOther') LIMIT 1[0m
+  [4;36;1mTag Create (0.000172)[0m   [0;1mINSERT INTO `tags` (`name`) VALUES('OrOther')[0m
+  [4;35;1mTagging Create (0.000205)[0m   [0mINSERT INTO `taggings` (`tag_id`, `taggable_type`, `taggable_id`, `created_at`) VALUES(6, 'Action', 10, '2008-03-09 22:59:28')[0m
+  [4;36;1mSQL (0.000916)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000162)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000155)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000167)[0m   [0mBEGIN[0m
+  [4;36;1mAction Columns (0.000426)[0m   [0;1mSHOW FIELDS FROM `actions`[0m
+  [4;35;1mSQL (0.001046)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000208)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000119)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000100)[0m   [0;1mBEGIN[0m
+  [4;35;1mTagging Columns (0.000336)[0m   [0mSHOW FIELDS FROM `taggings`[0m
+  [4;36;1mAction Create (0.000299)[0m   [0;1mINSERT INTO `actions` (`updated_at`, `title`, `url`, `description`, `feed_id`, `created_at`) VALUES('2008-03-09 22:59:46', NULL, NULL, NULL, NULL, '2008-03-09 22:59:46')[0m
+  [4;35;1mTag Load (0.000300)[0m   [0mSELECT * FROM `tags` WHERE (name LIKE 'Something') LIMIT 1[0m
+  [4;36;1mTag Columns (0.000235)[0m   [0;1mSHOW FIELDS FROM `tags`[0m
+  [4;35;1mTag Load (0.000226)[0m   [0mSELECT * FROM `tags` WHERE (tags.name = 'Something') LIMIT 1[0m
+  [4;36;1mTag Create (0.000185)[0m   [0;1mINSERT INTO `tags` (`name`) VALUES('Something')[0m
+  [4;35;1mTagging Create (0.000213)[0m   [0mINSERT INTO `taggings` (`tag_id`, `taggable_type`, `taggable_id`, `created_at`) VALUES(7, 'Action', 11, '2008-03-09 22:59:46')[0m
+  [4;36;1mTag Load (0.000719)[0m   [0;1mSELECT * FROM `tags` WHERE (name LIKE 'OrOther') LIMIT 1[0m
+  [4;35;1mTag Load (0.000252)[0m   [0mSELECT * FROM `tags` WHERE (tags.name = 'OrOther') LIMIT 1[0m
+  [4;36;1mTag Create (0.000180)[0m   [0;1mINSERT INTO `tags` (`name`) VALUES('OrOther')[0m
+  [4;35;1mTagging Create (0.000193)[0m   [0mINSERT INTO `taggings` (`tag_id`, `taggable_type`, `taggable_id`, `created_at`) VALUES(8, 'Action', 11, '2008-03-09 22:59:46')[0m
+  [4;36;1mSQL (0.000832)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000163)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000124)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000168)[0m   [0mBEGIN[0m
+  [4;36;1mAction Columns (0.000429)[0m   [0;1mSHOW FIELDS FROM `actions`[0m
+  [4;35;1mSQL (0.000142)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000230)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeed Load (0.000394)[0m   [0mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 517402238) [0m
+  [4;36;1mSQL (0.000180)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000120)[0m   [0mBEGIN[0m
+  [4;36;1mFeed Load (0.000313)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 517402238) [0m
+  [4;35;1mTagging Columns (0.000370)[0m   [0mSHOW FIELDS FROM `taggings`[0m
+  [4;36;1mAction Create (0.000272)[0m   [0;1mINSERT INTO `actions` (`updated_at`, `title`, `url`, `description`, `feed_id`, `created_at`) VALUES('2008-03-09 23:00:15', NULL, NULL, NULL, 517402238, '2008-03-09 23:00:15')[0m
+  [4;35;1mTag Load (0.000295)[0m   [0mSELECT * FROM `tags` WHERE (name LIKE 'Something') LIMIT 1[0m
+  [4;36;1mTag Columns (0.000231)[0m   [0;1mSHOW FIELDS FROM `tags`[0m
+  [4;35;1mTag Load (0.000226)[0m   [0mSELECT * FROM `tags` WHERE (tags.name = 'Something') LIMIT 1[0m
+  [4;36;1mTag Create (0.000176)[0m   [0;1mINSERT INTO `tags` (`name`) VALUES('Something')[0m
+  [4;35;1mTagging Create (0.000207)[0m   [0mINSERT INTO `taggings` (`tag_id`, `taggable_type`, `taggable_id`, `created_at`) VALUES(9, 'Action', 12, '2008-03-09 23:00:15')[0m
+  [4;36;1mTag Load (0.000232)[0m   [0;1mSELECT * FROM `tags` WHERE (name LIKE 'OrOther') LIMIT 1[0m
+  [4;35;1mTag Load (0.000216)[0m   [0mSELECT * FROM `tags` WHERE (tags.name = 'OrOther') LIMIT 1[0m
+  [4;36;1mTag Create (0.000171)[0m   [0;1mINSERT INTO `tags` (`name`) VALUES('OrOther')[0m
+  [4;35;1mTagging Create (0.000188)[0m   [0mINSERT INTO `taggings` (`tag_id`, `taggable_type`, `taggable_id`, `created_at`) VALUES(10, 'Action', 12, '2008-03-09 23:00:15')[0m
+  [4;36;1mSQL (0.000878)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000162)[0m   [0mBEGIN[0m
+  [4;36;1mFeed Load (0.000421)[0m   [0;1mSELECT * FROM `feeds` WHERE (`feeds`.`id` = 517402238) [0m
+  [4;35;1mAction Create (0.000349)[0m   [0mINSERT INTO `actions` (`updated_at`, `title`, `url`, `description`, `feed_id`, `created_at`) VALUES('2008-03-09 23:00:15', NULL, NULL, 'Test hello <br />Tags: Something, OrOther<br /> world', 517402238, '2008-03-09 23:00:15')[0m
+  [4;36;1mTag Load (0.000468)[0m   [0;1mSELECT * FROM `tags` WHERE (name LIKE 'Something') LIMIT 1[0m
+  [4;35;1mTag Load (0.000317)[0m   [0mSELECT * FROM `tags` WHERE (tags.name = 'Something') LIMIT 1[0m
+  [4;36;1mTag Create (0.000209)[0m   [0;1mINSERT INTO `tags` (`name`) VALUES('Something')[0m
+  [4;35;1mTagging Create (0.000219)[0m   [0mINSERT INTO `taggings` (`tag_id`, `taggable_type`, `taggable_id`, `created_at`) VALUES(11, 'Action', 13, '2008-03-09 23:00:15')[0m
+  [4;36;1mTag Load (0.000265)[0m   [0;1mSELECT * FROM `tags` WHERE (name LIKE 'OrOther') LIMIT 1[0m
+  [4;35;1mTag Load (0.000286)[0m   [0mSELECT * FROM `tags` WHERE (tags.name = 'OrOther') LIMIT 1[0m
+  [4;36;1mTag Create (0.000234)[0m   [0;1mINSERT INTO `tags` (`name`) VALUES('OrOther')[0m
+  [4;35;1mTagging Create (0.000284)[0m   [0mINSERT INTO `taggings` (`tag_id`, `taggable_type`, `taggable_id`, `created_at`) VALUES(12, 'Action', 13, '2008-03-09 23:00:15')[0m
+  [4;36;1mSQL (0.009516)[0m   [0;1mROLLBACK[0m
