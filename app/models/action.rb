@@ -7,7 +7,7 @@ class Action < ActiveRecord::Base
   delegate :site, :to => :feed
   
   acts_as_taggable
-  acts_as_mappable
+  acts_as_mappable :lat_column_name => :latitude, :lng_column_name => :longitude
   
   before_save :look_for_tags, :look_for_location, :geocode_lookup
   
@@ -58,7 +58,7 @@ protected
       if result.success
         self.latitude = result.lat
         self.longitude = result.lng
-        puts "     Geocoding Successful" 
+        puts "     Geocoding Successful - #{result}" 
       end
     end
   end

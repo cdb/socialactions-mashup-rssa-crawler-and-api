@@ -1,0 +1,86 @@
+= Mappa
+
+== Overview 
+
+Mappa is a Rails plug-in map-creation API for creating maps embedded in html web pages. Presently it only supports Google's Gmap2 API.
+It was written primarily because of the hacks required to make the Cartographer.rb rails plugin work with the new Gmap2 API. 
+
+Following on from a basic implementation I got frustrated with the amount of javascript I was having to embed within my controller code, a necessity because of the dynamic nature of many of the maps (and map creation techniques) I was using. The result was the latest version of mappa which enables you to build your map javascript from external files.
+
+You need a google API key to use this plugin. This may be obtained by visiting http://www.google.com/apis/maps/signup.html. The API used in this example will suffice for testing as long as you are using the following testing url: http://localhost:3000
+
+This plugin is under constant development but is being used without any problems in production in spotcrime.net. Any amendments, suggestions, etc. are welcomed. 
+Further examples of Mappa usage are available at the blog at http://neverintheoffice.net 
+
+For more information, discussion, discourse, etc, just email me at andy@spotcrime.net
+
+copyright Andy Mendelsohn.
+Andy Mendelsohn 2007
+
+== Usage
+Place the mappa folder into your vendor/plugins directory. There is no need to 'include Mappa' as it's included dynamically with the init.rb
+
+Examples:
+=== Basic
+
+The following quick example should produce a basic map.
+
+map_controller.rb :
+
+-------8<-------------------
+class MapController < ApplicationController
+
+  def index
+    
+   @page_title = "Create new map"
+
+   @gmap = Mappa::GMap.new()
+   # the gmap api key for localhost:3000 - remember to change this!
+   @gmap.api_key = "ABQIAAAArjtwNyA-0TDmcb74hMzhHBTJQa0g3IQ9GZqIMmInSLzwtGDKaBRSDWK-cqMmi3YB5dD-8a6Kwe1Qmg"
+
+   @gmap.lat = 51.775362610
+   @gmap.lng = -0.00100011
+   @gmap.name = 'gmap'
+   @gmap.zoom = 12
+   
+  end
+  
+end
+-------8<-------------------
+
+The layout file: map.rhtml
+
+-------8<-------------------
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <title><%= @page_title || 'map' %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <%= yield :map_headers %> 
+  </head>
+  <body onload="<%= @gmap.onload_func_name %>()" onunload="GUnload">    
+    <%= yield %>
+  </body>
+</html>
+
+-------8<-------------------
+
+The view: index.rhtml
+
+-----8< -------------------
+
+<% content_for :map_headers do %>
+    <%= map_header(@gmap) %>
+    <%= map_body(@gmap) %>
+<% end %>
+
+<div style="height:700px;width:800px" id="gmap"></div>
+
+-----8<------------------
+
+
+
+
+
