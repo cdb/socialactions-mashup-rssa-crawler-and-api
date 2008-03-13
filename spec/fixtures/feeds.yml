@@ -117,3 +117,10 @@ first_giving:
   tag_finder: 
   last_accessed: <%= 1.day.ago %>
   site: first_giving
+
+zazengo:
+  name: Latest Zazengo Projects
+  url: http://www.zazengo.com/projects.rss
+  tag_finder: "<div>Topics: <span class=\"issues\">([\w\s,]+)</span></div>"
+  last_accessed: <%= 1.day.ago %>
+  site: zazengo
