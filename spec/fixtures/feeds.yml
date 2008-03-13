@@ -2,6 +2,7 @@ global_giving:
   name: GlobalGiving
   url: http://feeds.feedburner.com/GlobalGivingProjects
   tag_finder: 
+  location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: global_giving
 
@@ -9,6 +10,7 @@ pledge_bank:
   name: PledgeBank
   url: http://everywhere.en-gb.pledgebank.com/rss/list
   tag_finder: 
+  location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: pledge_bank
   
@@ -16,6 +18,7 @@ change_org_giving:
   name: Change.org Giving Networks
   url: http://www.change.org/giving_networks/rss
   tag_finder: "<br />Tags: ([\w\s,]+)<br />" 
+  location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: change_org
 
@@ -23,6 +26,7 @@ change_org_changes:
   name: Change.org Changes 
   url: http://www.change.org/changes/rss
   tag_finder: "<br />Tags: ([\w\s,]+)<br />" 
+  location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: change_org
 
@@ -30,6 +34,7 @@ razoo_acts:
   name: Razoo Acts
   url: http://beta.razoo.com/browse/acts?sort=new.d&filter=ne&format=xml
   tag_finder: 
+  location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: razoo
 
@@ -37,6 +42,7 @@ razoo_goals:
   name: Razoo Goals
   url: http://beta.razoo.com/browse/goals?sort=new.d&format=xml
   tag_finder: 
+  location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: razoo
 
@@ -44,12 +50,14 @@ democracy_in_action:
   name: DemocracyinAction
   url: http://salsa.democracyinaction.org/dia/network/pfp.jsp
   tag_finder: 
+  location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: democracy_in_action
 
 care_2_petitions:
   name: Care2 Petitions
   url: http://www.thepetitionsite.com/browse-petitions/rss
+  location_finder: 
   tag_finder: 
   last_accessed: <%= 1.day.ago %>
   site: care_2_petitions
@@ -59,6 +67,7 @@ care_2_petitions:
 #   name: ThePoint
 #   url: http://www.thepoint.com/rss
 #   tag_finder: 
+#  location_finder: 
 #   last_accessed: <%= 1.day.ago %>
 # site: the_point
 
@@ -66,6 +75,7 @@ give_meaning_proposals:
   name: GiveMeaning Proposals 
   url: http://www.givemeaning.com/SaveAnything/SearchAssetsRSS.aspx?Community=%2fWorld&Cause=0&type=proposals&sortby=DateAdded&dir=Desc&pagesize=50
   tag_finder: "\n\n Tags: ([\w\s,]+)"
+  location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: give_meaning
 
@@ -73,6 +83,7 @@ give_meaning_projects:
   name: GiveMeaning Projects
   url: http://www.givemeaning.com/SaveAnything/SearchAssetsRSS.aspx?Community=%2fWorld&Cause=0&type=projects&sortby=DateAdded&dir=Desc&pagesize=50
   tag_finder: "\n\n Tags: ([\w\s,]+)"
+  location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: give_meaning
 
@@ -80,6 +91,7 @@ changing_the_present:
   name: ChangingthePresent New Drives
   url: http://www.changingthepresent.com/drives/rss
   tag_finder: 
+  location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: changing_the_present
 
@@ -87,6 +99,7 @@ fundable:
   name: Fundable
   url: http://www.fundable.org/search_rss?SearchableText=&portal_type%3Alist=GroupAction&review_state=public&review_state=private&sort_on=created&sort_order=descending
   tag_finder: 
+  location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: fundable
 
@@ -94,6 +107,7 @@ bring_light:
   name: BringLight
   url: http://www.bringlight.com/feeds/all
   tag_finder: 
+  location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: bring_light
 
@@ -101,6 +115,7 @@ kiva:
   name: Kiva
   url: http://www.kiva.org/app.php?page=rss&action=businesses&status=fundRaising
   tag_finder: 
+  location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: kiva
 
@@ -108,6 +123,7 @@ six_degrees:
   name: SixDegrees
   url: http://www.networkforgood.org/pca/badgefeed.aspx
   tag_finder: 
+  location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: six_degrees
 
@@ -115,12 +131,14 @@ first_giving:
   name: Firstgiving
   url: http://feeds.firstgiving.com/rss/fundraisers/quickview.rss
   tag_finder: 
+  location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: first_giving
 
 zazengo:
   name: Latest Zazengo Projects
   url: http://www.zazengo.com/projects.rss
-  tag_finder: "<div>Topics: <span class=\"issues\">([\w\s,]+)</span></div>"
+  tag_finder: "<span class=\"issues\">([\w\s,]+)</span>"
+  location_finder: "<span class=\"street-address\">([\w\s,]+)</span>"
   last_accessed: <%= 1.day.ago %>
   site: zazengo

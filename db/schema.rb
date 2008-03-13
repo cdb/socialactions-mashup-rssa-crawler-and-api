@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 8) do
+ActiveRecord::Schema.define(:version => 10) do
 
   create_table "actions", :force => true do |t|
     t.text     "description"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 8) do
     t.integer  "feed_id"
     t.decimal  "latitude",    :precision => 11, :scale => 10
     t.decimal  "longitude",   :precision => 11, :scale => 10
+    t.string   "location"
   end
 
   create_table "feeds", :force => true do |t|
@@ -30,6 +31,7 @@ ActiveRecord::Schema.define(:version => 8) do
     t.datetime "updated_at"
     t.string   "tag_finder"
     t.integer  "site_id"
+    t.string   "location_finder"
   end
 
   create_table "sites", :force => true do |t|
