@@ -2,8 +2,9 @@
 
 #search_results
   %h2 Results
-  = render :partial => 'action', :collection => current_objects
-
+  = page_entries_info @actions
+  = render :partial => 'action', :collection => @actions
+  = will_paginate @actions
 
       
 

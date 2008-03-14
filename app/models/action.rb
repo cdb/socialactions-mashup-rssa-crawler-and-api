@@ -24,6 +24,10 @@ class Action < ActiveRecord::Base
     write_attribute(:description, fix_quoted_html(new_description))
   end
 
+  def self.per_page
+    10
+  end
+
 protected
   def fix_quoted_html(text)
     text.gsub(/\&lt;/, '<').gsub(/\&gt;/, '>')

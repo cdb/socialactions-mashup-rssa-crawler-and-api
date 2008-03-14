@@ -1,16 +1,19 @@
 class ActionsController < ApplicationController
-  make_resourceful do
-    actions :index, :show
-    response_for :index do |format|
+  
+  def index
+    @actions = Action.paginate(:all, :page => params[:page], :order => 'created_at DESC')
+    respond_to do |format|
       format.html
       format.xml
     end
-    response_for :show do |format|
-      format.html
-      format.xml
-    end
+    
   end
   
-
-  
+  def show
+    @action = Action.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.xml
+    end    
+  end
 end
