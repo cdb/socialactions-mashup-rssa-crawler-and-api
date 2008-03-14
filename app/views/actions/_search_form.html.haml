@@ -1,0 +1,33 @@
+#search_box
+  %h2 Find an Action
+
+  %form
+
+    %table{ :border=>"0", :cellpadding=>"0", :cellspacing=>"0" }
+      %tr.first
+        %td Search Term:
+        %td= text_field_tag 'search_term', nil, :size => 22
+        %td
+          = submit_tag 'Search'
+          &nbsp;
+          = submit_tag 'Google Map'
+          &nbsp;
+          = submit_tag 'Tag Cloud'
+          &nbsp;
+          = submit_tag 'Random'
+      %tr
+        %td Type of Action:
+        %td= select_tag 'action_type', options_for_action_type_select
+        %td
+          Created:
+          = select_tag 'create', options_for_created_select
+  
+    - Site.find(:all, :order => :name).each_slice(4) do |sites|
+      .platform_select
+        - sites.each do |site|
+          = check_box_tag site.id, site.name, true
+          = site.name
+          %br/
+  
+  %br{:clear => 'all'}/
+  
