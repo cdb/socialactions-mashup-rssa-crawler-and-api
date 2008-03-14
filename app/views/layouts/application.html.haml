@@ -1,15 +1,11 @@
-!!! 1.1
+!!! 1.0
 
 %html{"xmlns"=>"http://www.w3.org/1999/xhtml", "xml:lang"=>"en"}
   %head
     %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}/
-    %title= 'Social Actions'
+    %title A Mashup of 29+ Social Action Platforms
     = stylesheet_link_tag 'main'
     = yield :map_headers
   %body{ map_loader }
-
-    #main_container
-      #body
-        #content
-          = yield
-
+    
+    = yield

@@ -7,4 +7,26 @@ module ApplicationHelper
       {}
     end
   end
+  
+  def options_for_action_type_select
+    options_for_select([
+    	['All actions', "all"],
+      ['Group fundraising', "fundraiser"],
+      ['Grassroots petition', "petitions"],
+      ['Volunteer opportunity', "volunteer"],
+      ['Collective action', "pledge"],
+      ['Affinity group', "affinitygroup"]
+    ])
+  end
+  
+  def options_for_created_select
+    options_for_select([
+      ['Last 30 days', "last30days"],
+    	['Last 14 days',"last14days"],
+    	['Last week', "lastweek"],
+    	['Yesterday', "yesterday"],
+    	['Today', "today"]
+    ])
+  end
+  
 end

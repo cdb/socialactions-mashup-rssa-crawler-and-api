@@ -1,4 +1,10 @@
-%h1 Listing actions
+= render :partial => 'search_form'
 
-= render :partial => 'action', :collection => current_objects
+#search_results
+  %h2 Results
+  = render :partial => 'action', :collection => current_objects
+
+
+      
+
 
