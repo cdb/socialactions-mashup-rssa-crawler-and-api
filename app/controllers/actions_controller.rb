@@ -15,7 +15,7 @@ class ActionsController < ApplicationController
   def show
     @action = Action.find(params[:id])
     respond_to do |format|
-      format.html
+      format.html { render :layout => false}
       format.xml
     end    
   end

@@ -25,13 +25,9 @@
     - Site.find(:all, :order => :name).each_slice(4) do |sites|
       .platform_select
         - sites.each do |site|
-          /= f.check_box 'sites[]', site.id, true
           = check_box_tag 'search[sites][]', site.id, true
           = site.name
           %br/
-
-    = debug @search
-    = @search.build_conditions
           
   %br{:clear => 'all'}/
   

@@ -1,22 +1,33 @@
-%h1 Viewing action
-
 %div[@action]
-  %h2= @action.title
+  .action-title
+    = @action.title
   
+  .action-source
+    %span{:class => 'action-byline'}
+      Created on
+      = link_to @action.site.name, @action.site.url
+      by
+      = link_to 'TODO', ''
+    %br/
+    %span{:class => 'action-created'}
+      = @action.created_at.to_s(:default)
+    %br/
+    %span{:class => 'action-type'} TODO
+  %span{:class => 'action-goal'}
+    %strong
+      Goal:
+    TODO
+    %br/
+  %span{:class => 'action-location'}
+    %strong
+      Location:
+    = @action.location
+    %br/
+  %span{:class => 'action-tags'}
+    %strong
+      Tags:
+    = tag_list_for @action
+    %br/
   .description
     = @action.description
-  
-  %p
-    Link:
-    = link_to @action.url, @action.url, :popup => true
-
-  .dates
-    Created:
-    = @action.created_at
-
-  .platform
-    Source:
-    = link_to @action.site.name, @action.site.url, :popup => true
-  
-
-  %p= link_to :back
+  = link_to @action.url, @action.url, :class => 'action-url'

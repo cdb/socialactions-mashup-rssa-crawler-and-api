@@ -4,7 +4,8 @@
   %head
     %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}/
     %title A Mashup of 29+ Social Action Platforms
-    = stylesheet_link_tag 'main'
+    = stylesheet_link_tag 'main', 'facebox'
+    = javascript_include_tag 'jquery', 'facebox', 'application'
     = yield :map_headers
   %body{ map_loader }
     
