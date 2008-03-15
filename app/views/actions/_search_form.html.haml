@@ -1,12 +1,12 @@
 #search_box
   %h2 Find an Action
 
-  - form_tag actions_path, :method => :get do
+  - form_for @search, :url => actions_path, :html => {:method => :get} do |f|
 
     %table{ :border=>"0", :cellpadding=>"0", :cellspacing=>"0" }
       %tr.first
         %td Search Term:
-        %td= text_field_tag 'search_term', nil, :size => 22
+        %td= f.text_field :keywords, :size => 22
         %td
           = submit_tag 'Search'
           &nbsp;
@@ -17,17 +17,21 @@
           = submit_tag 'Random'
       %tr
         %td Type of Action:
-        %td= select_tag 'action_type', options_for_action_type_select
+        %td= f.select :action_type, options_for_action_type_select
         %td
           Created:
-          = select_tag 'create', options_for_created_select
+          = f.select :created, options_for_created_select
   
     - Site.find(:all, :order => :name).each_slice(4) do |sites|
       .platform_select
         - sites.each do |site|
-          = check_box_tag site.id, site.name, true
+          /= f.check_box 'sites[]', site.id, true
+          = check_box_tag 'search[sites][]', site.id, true
           = site.name
           %br/
-  
+
+    = debug @search
+    = @search.build_conditions
+          
   %br{:clear => 'all'}/
   
