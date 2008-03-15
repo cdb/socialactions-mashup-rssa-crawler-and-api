@@ -29,4 +29,10 @@ module ApplicationHelper
     ])
   end
   
+  def tag_list_for(action)
+    action.tags.collect do |tag|
+      link_to tag.name, tag_path(tag)
+    end.join(', ')
+  end
+  
 end

@@ -25,6 +25,6 @@
   %span{:class => 'action-tags'}
     %strong
       Tags:
-    = action.tag_list.to_s
+    = tag_list_for action
     %br/
   = link_to action.url, action.url, :class => 'action-url'
