@@ -14,7 +14,7 @@ class MapController < ApplicationController
       
       incident_point = Mappa::GLatLng.new(:lat => marker_lat, :lng => marker_lng)
       
-      @gmap.add_marker(:point => incident_point, :create_with => 'createWithIconAndHtml', :html => "'#{escape_javascript(action.title)}'", :icon_image => "'/images/marker.png'")    
+      @gmap.add_marker(:point => incident_point, :create_with => 'createWithIconAndHtml', :html => "'#{escape_javascript(small_map_view_of(action))}'", :icon_image => "'/images/marker.png'")    
     end
     # render :template => "map/index"
 
@@ -62,4 +62,23 @@ protected
   #     return 41.98, -87.90 # Chicago, an estimate
   #   end
   # end
+  
+  def small_map_view_of(action)
+    %{
+      <div class="map-action">
+        <div class="title">
+          <a href="/actions/#{action.id}">#{action.title}</a>
+        </div>
+        <div class="location">
+          <b>Location:</b> #{action.location}
+        </div>
+        <div class="byline">
+          <b>Created on:</b> <a href="#{action.site.url}">#{action.site.name}</a>
+        </div>
+        <div class="created">
+          <b>Created at:</b> #{action.created_at.to_s(:default)}
+        </div>
+      </div>
+    }    
+  end
 end

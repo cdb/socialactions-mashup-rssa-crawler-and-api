@@ -1,22 +1,22 @@
 %h1 Viewing action
 
-%div[current_object]
-  %h2= current_object.title
+%div[@action]
+  %h2= @action.title
   
   .description
-    = current_object.description
+    = @action.description
   
   %p
     Link:
-    = link_to current_object.url, current_object.url, :popup => true
+    = link_to @action.url, @action.url, :popup => true
 
   .dates
     Created:
-    = current_object.created_at
+    = @action.created_at
 
   .platform
     Source:
-    = link_to current_object.site.name, current_object.site.url, :popup => true
+    = link_to @action.site.name, @action.site.url, :popup => true
   
 
-  %p= link_to 'Back', objects_path
+  %p= link_to :back

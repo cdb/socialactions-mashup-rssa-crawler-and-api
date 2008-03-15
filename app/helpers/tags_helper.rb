@@ -10,7 +10,7 @@ module TagsHelper
     end
   end
   
-  def page_entries_info(collection, tag)
+  def page_entries_info_for_tag(collection, tag)
     %{Displaying entries <b>%d&nbsp;-&nbsp;%d</b> of <b>%d</b> in total that match the tag <b>%s</b>} % [
       collection.offset + 1,
       collection.offset + collection.length,
