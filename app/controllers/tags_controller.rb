@@ -1,5 +1,5 @@
 class TagsController < ApplicationController
-  before_filter :load_tags
+  before_filter :load_tags, :load_search
   
   def index
   end
@@ -12,5 +12,9 @@ class TagsController < ApplicationController
 private
   def load_tags
     @tags = Action.tag_counts
+  end
+  
+  def load_search
+    @search = Search.new(params[:search])
   end
 end

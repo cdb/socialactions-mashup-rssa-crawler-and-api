@@ -5,6 +5,7 @@ class MapController < ApplicationController
   include ActionView::Helpers::JavaScriptHelper 
   
   def index
+    @search = Search.new(params[:search])
     actions = Action.find(:all, :origin => [current_latitude, current_longitude], :conditions => 'latitude IS NOT NULL and longitude IS NOT NULL')
     actions.each do |action|
       # now for the lat and lng of the marker we want to add. 
