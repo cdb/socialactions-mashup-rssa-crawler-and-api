@@ -2,20 +2,12 @@
   = link_to action.title, action_path(action), :class => 'action-title', :rel => 'facebox'
   
   .action-source
-    %span{:class => 'action-byline'}
-      Created on
-      = link_to action.site.name, action.site.url
-      by
-      = link_to 'TODO', ''
-    %br/
-    %span{:class => 'action-created'}
-      = action.created_at.to_s(:default)
-    %br/
-    %span{:class => 'action-type'} TODO
+    .action-byline= "Created on #{link_to action.site.name, action.site.url} by TODO"
+    .action-created= action.created_at.to_s(:default)
+    .action-type= "#{action.action_type} "
   %span{:class => 'action-goal'}
     %strong
       Goal:
-    TODO
     %br/
   %span{:class => 'action-location'}
     %strong
@@ -27,4 +19,6 @@
       Tags:
     = tag_list_for action
     %br/
+  .action-description
+    = shorten_and_clean(action.description)
   = link_to action.url, action.url, :class => 'action-url'

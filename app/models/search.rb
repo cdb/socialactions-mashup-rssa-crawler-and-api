@@ -33,6 +33,7 @@ class Search < ActiveRecord::BaseWithoutTable
   end
 
   def has_site?(site)
+    return true if sites.empty?
     sites.include?(site.id.to_s)
   end
 

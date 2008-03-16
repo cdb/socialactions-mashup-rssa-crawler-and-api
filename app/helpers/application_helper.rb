@@ -35,5 +35,11 @@ module ApplicationHelper
       link_to tag.name, tag_path(tag)
     end.join(', ')
   end
+
+  def shorten_and_clean(text)
+    output = strip_tags(text).to(200).split(' ')
+    output.pop
+    output.join(' ') + '...'
+  end
   
 end
