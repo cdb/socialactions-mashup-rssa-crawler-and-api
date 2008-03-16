@@ -10,7 +10,7 @@ class Search < ActiveRecord::BaseWithoutTable
     if kind == 'map'
       Action.find(:all, :origin => [current_latitude, current_longitude], :conditions => build_conditions)
     else
-      Action.paginate(:all, :page => page, :order => 'created_at DESC', :conditions => build_conditions)
+      Action.paginate(:all, :page => page, :order => build_order, :conditions => build_conditions)
     end
   end
 
@@ -22,6 +22,10 @@ class Search < ActiveRecord::BaseWithoutTable
     add_created
     add_mapping
     conditions.join(' AND ')
+  end
+  
+  def build_order
+    kind == 'random' ? 'RAND()' : 'created_at DESC'
   end
   
   def sites

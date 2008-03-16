@@ -14,7 +14,7 @@
           &nbsp;
           = submit_tag 'Tag Cloud', :onclick => "$('#new_search').attr('action', '#{tags_path}')"
           &nbsp;
-          = submit_tag 'Random'
+          = submit_tag 'Random', :onclick => "$('#new_search').attr('action', '#{random_path}')"
       %tr
         %td Type of Action:
         %td= f.select :action_type, options_for_action_type_select

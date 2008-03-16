@@ -9,6 +9,16 @@ class ActionsController < ApplicationController
     end
   end
   
+  def random
+    @search = Search.new(params[:search].merge(:kind => 'random'))
+    @actions = @search.results(params[:page])
+    if @actions.empty?
+      redirect_to(:back)
+    else
+      redirect_to(@actions.first.url)
+    end
+  end
+  
   def show
     @action = Action.find(params[:id])
     respond_to do |format|
