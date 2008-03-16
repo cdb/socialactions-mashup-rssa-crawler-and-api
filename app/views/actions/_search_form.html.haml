@@ -10,9 +10,9 @@
         %td
           = submit_tag 'Search'
           &nbsp;
-          = submit_tag 'Google Map'
+          = submit_tag 'Google Map', :onclick => "$('#new_search').attr('action', '#{map_index_path}')"
           &nbsp;
-          = submit_tag 'Tag Cloud'
+          = submit_tag 'Tag Cloud', :onclick => "$('#new_search').attr('action', '#{tags_path}')"
           &nbsp;
           = submit_tag 'Random'
       %tr

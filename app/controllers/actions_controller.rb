@@ -1,10 +1,8 @@
 class ActionsController < ApplicationController
   
   def index
-    redirect_to '/map' and return false if params[:commit] == 'Google Map'
-    redirect_to '/tags' and return false if params[:commit] == 'Tag Cloud'
     @search = Search.new(params[:search])
-    @actions = Action.paginate(:all, :page => params[:page], :order => 'created_at DESC', :conditions => @search.build_conditions)
+    @actions = @search.results(params[:page])
     respond_to do |format|
       format.html
       format.xml
