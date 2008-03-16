@@ -8,5 +8,9 @@
     = javascript_include_tag 'jquery', 'facebox', 'application'
     = yield :map_headers
   %body{ map_loader }
+  
+    = render :partial => 'layouts/header'
     
     = yield
+    
+    = render :partial => 'layouts/footer'
