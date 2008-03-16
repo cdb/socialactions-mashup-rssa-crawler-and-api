@@ -11,7 +11,9 @@ class TagsController < ApplicationController
 
 private
   def load_tags
-    @tags = Action.tag_counts
+    @tags = Action.tag_counts(:order => 'tags.name', :at_least => 2)
+    #  :order - A piece of SQL to order by. Eg 'tags.count desc' or 'taggings.created_at desc'
+    
   end
   
   def load_search

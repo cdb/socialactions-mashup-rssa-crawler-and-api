@@ -7,7 +7,6 @@ class ActionsController < ApplicationController
       format.html
       format.xml
     end
-    
   end
   
   def show
