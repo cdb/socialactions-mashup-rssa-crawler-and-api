@@ -11,11 +11,11 @@ module ApplicationHelper
   def options_for_action_type_select
     [
     	['All actions', "all"],
-      ['Group fundraising', "fundraiser"],
-      ['Grassroots petition', "petitions"],
-      ['Volunteer opportunity', "volunteer"],
-      ['Collective action', "pledge"],
-      ['Affinity group', "affinitygroup"]
+      ['Affinity Group'],
+      ['Group Fundraiser'],
+      ['Micro-credit Loan'],
+      ['Petition'],
+      ['Pledged Action']
     ]
   end
   

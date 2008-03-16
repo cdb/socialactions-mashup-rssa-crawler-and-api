@@ -5,6 +5,7 @@ global_giving:
   location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: global_giving
+  action_type: Group Fundraiser
 
 pledge_bank:
   name: PledgeBank
@@ -13,7 +14,8 @@ pledge_bank:
   location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: pledge_bank
-  
+  action_type: Pledged Action
+
 change_org_giving:
   name: Change.org Giving Networks
   url: http://www.change.org/giving_networks/rss
@@ -21,7 +23,8 @@ change_org_giving:
   location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: change_org
-
+  action_type: Group Fundraiser
+  
 change_org_changes:
   name: Change.org Changes 
   url: http://www.change.org/changes/rss
@@ -29,6 +32,7 @@ change_org_changes:
   location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: change_org
+  action_type: Affinity Group
 
 razoo_acts:
   name: Razoo Acts
@@ -37,7 +41,8 @@ razoo_acts:
   location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: razoo
-
+  action_type: Pledged Action
+  
 razoo_goals:
   name: Razoo Goals
   url: http://beta.razoo.com/browse/goals?sort=new.d&format=xml
@@ -45,6 +50,7 @@ razoo_goals:
   location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: razoo
+  action_type: Group Fundraiser
 
 democracy_in_action:
   name: DemocracyinAction
@@ -53,6 +59,7 @@ democracy_in_action:
   location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: democracy_in_action
+  action_type: Group Fundraiser
 
 care_2_petitions:
   name: Care2 Petitions
@@ -61,7 +68,7 @@ care_2_petitions:
   tag_finder: 
   last_accessed: <%= 1.day.ago %>
   site: care_2_petitions
-
+  action_type: Petition
 # https is causing failing right now
 # the_point:
 #   name: ThePoint
@@ -70,6 +77,7 @@ care_2_petitions:
 #  location_finder: 
 #   last_accessed: <%= 1.day.ago %>
 # site: the_point
+  # action_type: Pledged Action
 
 give_meaning_proposals:
   name: GiveMeaning Proposals 
@@ -78,6 +86,7 @@ give_meaning_proposals:
   location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: give_meaning
+  action_type: Pledged Action
 
 give_meaning_projects:
   name: GiveMeaning Projects
@@ -86,7 +95,8 @@ give_meaning_projects:
   location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: give_meaning
-
+  action_type: Pledged Action
+  
 changing_the_present:
   name: ChangingthePresent New Drives
   url: http://www.changingthepresent.com/drives/rss
@@ -94,6 +104,7 @@ changing_the_present:
   location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: changing_the_present
+  action_type: Group Fundraiser
 
 fundable:
   name: Fundable
@@ -102,7 +113,8 @@ fundable:
   location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: fundable
-
+  action_type: Group Fundraiser
+  
 bring_light:
   name: BringLight
   url: http://www.bringlight.com/feeds/all
@@ -110,6 +122,7 @@ bring_light:
   location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: bring_light
+  action_type: Group Fundraiser
 
 kiva:
   name: Kiva
@@ -118,7 +131,8 @@ kiva:
   location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: kiva
-
+  action_type: Micro-credit Loan
+  
 six_degrees:
   name: SixDegrees
   url: http://www.networkforgood.org/pca/badgefeed.aspx
@@ -126,6 +140,7 @@ six_degrees:
   location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: six_degrees
+  action_type: Group Fundraiser
 
 first_giving:
   name: Firstgiving
@@ -134,6 +149,7 @@ first_giving:
   location_finder: 
   last_accessed: <%= 1.day.ago %>
   site: first_giving
+  action_type: Group Fundraiser
 
 zazengo:
   name: Latest Zazengo Projects
@@ -142,3 +158,4 @@ zazengo:
   location_finder: "<span class=\"street-address\">([\w\s,]+)</span>"
   last_accessed: <%= 1.day.ago %>
   site: zazengo
+  action_type: Affinity Group

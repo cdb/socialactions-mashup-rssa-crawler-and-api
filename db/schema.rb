@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 13) do
+ActiveRecord::Schema.define(:version => 15) do
 
   create_table "actions", :force => true do |t|
     t.text     "description"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 13) do
     t.decimal  "longitude",   :precision => 15, :scale => 10
     t.string   "location"
     t.integer  "site_id"
+    t.string   "action_type"
   end
 
   create_table "feeds", :force => true do |t|
@@ -33,6 +34,7 @@ ActiveRecord::Schema.define(:version => 13) do
     t.string   "tag_finder"
     t.integer  "site_id"
     t.string   "location_finder"
+    t.string   "action_type"
   end
 
   create_table "sites", :force => true do |t|

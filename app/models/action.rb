@@ -69,6 +69,7 @@ protected
   
   def denormalize
     self.site_id = self.feed.site_id
+    self.action_type = self.feed.action_type
   end
   
 end

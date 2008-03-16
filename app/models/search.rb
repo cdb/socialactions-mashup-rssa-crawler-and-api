@@ -52,7 +52,7 @@ class Search < ActiveRecord::BaseWithoutTable
   
   def add_action_type
     unless action_type.nil? or action_type == 'all'
-      # conditions << "action_type = '#{action_type}'"
+      conditions << "action_type = '#{action_type}'"
     end
   end
   
