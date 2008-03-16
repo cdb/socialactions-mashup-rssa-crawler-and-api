@@ -14,6 +14,14 @@ class Search < ActiveRecord::BaseWithoutTable
     add_created
     conditions.join(' AND ')
   end
+  
+  def sites
+    @sites ||= []
+  end
+
+  def has_site?(site)
+    sites.include?(site.id.to_s)
+  end
 
   def reset_conditions
     @conditions = []
@@ -27,7 +35,7 @@ class Search < ActiveRecord::BaseWithoutTable
     unless keywords.nil? or keywords.empty?
       keyword_conditions = []
       keywords.split(' ').each do |keyword|
-        keyword_conditions << ActiveRecord::Base.send(:sanitize_sql, ["description LIKE ?", "%#{keyword}%"]) # TODO add url, title
+        keyword_conditions << sanitize(["description LIKE ?", "%#{keyword}%"]) # TODO add url, title
       end
       conditions << "(" + keyword_conditions.join(' OR ') + ")"
     end
@@ -41,13 +49,17 @@ class Search < ActiveRecord::BaseWithoutTable
   
   def add_sites
     unless sites.nil? or sites.empty?
-      # conditions << "sites IN (#{sites.join(',')})"
+      conditions << sanitize(["site_id IN (?)", sites])
     end
   end
   
   def add_created
     unless created.nil?
-      conditions << ActiveRecord::Base.send(:sanitize_sql, ["actions.created_at > ?", created.days.ago])
+      conditions << sanitize(["actions.created_at > ?", created.days.ago])
     end
+  end
+  
+  def sanitize(arg)
+    ActiveRecord::Base.send(:sanitize_sql, arg)
   end
 end

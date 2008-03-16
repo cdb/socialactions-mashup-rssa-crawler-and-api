@@ -1,15 +1,14 @@
 class Action < ActiveRecord::Base
 
   include GeoKit::Geocoders
-  
 
   belongs_to :feed
-  delegate :site, :to => :feed
+  belongs_to :site
   
   acts_as_taggable
   acts_as_mappable :lat_column_name => :latitude, :lng_column_name => :longitude
   
-  before_save :look_for_tags, :look_for_location, :geocode_lookup
+  before_save :look_for_tags, :look_for_location, :geocode_lookup, :denormalize
   
   def update_from_feed_item(item)
     puts "  -- Action: #{item.title}"
@@ -67,5 +66,9 @@ protected
     end
   end
   
+  
+  def denormalize
+    self.site_id = self.feed.site_id
+  end
   
 end

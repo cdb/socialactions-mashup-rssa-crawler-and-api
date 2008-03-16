@@ -25,7 +25,7 @@
     - Site.find(:all, :order => :name).each_slice(4) do |sites|
       .platform_select
         - sites.each do |site|
-          = check_box_tag 'search[sites][]', site.id, true
+          = check_box_tag 'search[sites][]', site.id, @search.has_site?(site)
           = site.name
           %br/
           
