@@ -9,7 +9,10 @@
     = yield :map_headers
   %body{ map_loader }
   
-    = render :partial => 'layouts/header'
+    - if params[:controller] == 'actions' and params[:action] == 'index' and params[:search].nil?
+      = render :partial => 'layouts/main_header'
+    - else
+      = render :partial => 'layouts/header'
     
     = yield
     
