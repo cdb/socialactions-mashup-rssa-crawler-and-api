@@ -48,7 +48,7 @@ class Search < ActiveRecord::BaseWithoutTable
     unless keywords.nil? or keywords.empty?
       keyword_conditions = []
       keywords.split(' ').each do |keyword|
-        keyword_conditions << sanitize(["description LIKE ?", "%#{keyword}%"]) # TODO add url, title
+        keyword_conditions << sanitize(["(description LIKE ? OR title LIKE ?)", "%#{keyword}%", "%#{keyword}%"])
       end
       conditions << "(" + keyword_conditions.join(' OR ') + ")"
     end
