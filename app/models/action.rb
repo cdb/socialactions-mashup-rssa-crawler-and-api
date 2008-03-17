@@ -16,6 +16,7 @@ class Action < ActiveRecord::Base
     self.url = item.link
     self.description = item.description
     self.created_at = item.pubDate if item.pubDate
+    self.created_at = item.dc_date if item.dc_date
     figure_out_address_from(item)
   end
   
