@@ -7,16 +7,21 @@
     .action-type= "#{action.action_type} "
   %span{:class => 'action-goal'}
     %strong
-      Goal:
+      Goal: 
+    Coming Soon...
     %br/
   %span{:class => 'action-location'}
     %strong
       Location:
-    = action.location
+    - unless action.location.nil? or action.location.empty?
+      = action.location
+    - else
+      Location unknown
     %br/
   %span{:class => 'action-tags'}
     %strong
       Tags:
+    
     = tag_list_for action
     %br/
   .action-description
