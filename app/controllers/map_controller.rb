@@ -3,7 +3,9 @@ class MapController < ApplicationController
   include ActionView::Helpers::JavaScriptHelper 
   
   def index
-    @search = Search.new(params[:search].merge(:kind => 'map', :ip_address => request.remote_ip))
+    @search = Search.new(params[:search])
+    @search.kind = 'map'
+    @search.ip_address = request.remote_ip
     @actions = @search.results(params[:page])
     setup_map
     @actions.each do |action|
