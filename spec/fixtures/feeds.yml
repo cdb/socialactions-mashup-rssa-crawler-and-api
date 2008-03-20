@@ -168,3 +168,12 @@ helpalot:
   last_accessed: <%= 1.day.ago %>
   site: helpalot
   action_type: Affinity Group
+
+donorschoose:
+  name: DonorsChoose
+  url: http://www.donorschoose.org/common/rss_feed.html?zone=0&schoolType=0&partiallyFunded=true&teacherType=0&y=22&x=20
+  tag_finder: 
+  location_finder: "<br />([\w\s,]+)<br />Level:"
+  last_accessed: <%= 1.day.ago %>
+  site: donorschoose
+  action_type: Group Fundraiser
