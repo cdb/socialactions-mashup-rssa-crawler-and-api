@@ -159,3 +159,12 @@ zazengo:
   last_accessed: <%= 1.day.ago %>
   site: zazengo
   action_type: Affinity Group
+
+helpalot:
+  name: Helpalot
+  url: http://www.helpalot.org/en/feed/projects/
+  tag_finder: 
+  location_finder: "<br /><br />\n([\w\s,]+)\n<br />"
+  last_accessed: <%= 1.day.ago %>
+  site: helpalot
+  action_type: Affinity Group

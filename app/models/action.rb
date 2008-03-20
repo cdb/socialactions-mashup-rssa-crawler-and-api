@@ -14,14 +14,26 @@ class Action < ActiveRecord::Base
     puts "  -- Action: #{item.title}"
     self.title = item.title
     self.url = item.link
-    self.description = item.description
+    self.description = description_for(item)
     self.created_at = item.pubDate if item.pubDate
     self.created_at = item.dc_date if item.dc_date
+    self.created_at = item.updated if item.updated
     figure_out_address_from(item)
   end
   
   def description=(new_description)
     write_attribute(:description, fix_quoted_html(new_description))
+  end
+  
+  # Seems like Atom uses <content> not <description> ?? 
+  def description_for(item)
+    if item.description
+      item.description
+    elsif item.content
+      item.content
+    else
+      ""
+    end
   end
 
   def self.per_page
