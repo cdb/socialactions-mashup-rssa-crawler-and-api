@@ -20,7 +20,14 @@ class Feed < ActiveRecord::Base
 
   class << self
     def parse_all
-      find(:all).each { |feed| puts "Parsing #{feed.name}"; feed.parse }
+      find(:all).each do |feed| 
+        puts "Parsing #{feed.name}"
+        begin
+          feed.parse
+        rescue
+          puts "ERROR on feed #{feed.name}"
+        end
+      end
     end
   end
 end
