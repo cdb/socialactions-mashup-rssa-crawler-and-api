@@ -22,12 +22,9 @@ care_2_petitions:
   name: Care2 Petitions
   url: http://www.thepetitionsite.com
 
-# https is causing failing right now
-# the_point:
-#   name: ThePoint
-#   url: http://www.thepoint.com/rss
-# 
-#   last_accessed: <%= 1.day.ago %>
+the_point:
+  name: ThePoint
+  url: http://www.thepoint.com
 
 give_meaning:
   name: GiveMeaning

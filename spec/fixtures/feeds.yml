@@ -69,15 +69,14 @@ care_2_petitions:
   last_accessed: <%= 1.day.ago %>
   site: care_2_petitions
   action_type: Petition
-# https is causing failing right now
-# the_point:
-#   name: ThePoint
-#   url: http://www.thepoint.com/rss
-#   tag_finder: 
-#  location_finder: 
-#   last_accessed: <%= 1.day.ago %>
-# site: the_point
-  # action_type: Pledged Action
+the_point:
+  name: ThePoint
+  url: http://www.thepoint.com/rss
+  tag_finder: 
+  location_finder: 
+  last_accessed: <%= 1.day.ago %>
+  site: the_point
+  action_type: Pledged Action
 
 give_meaning_proposals:
   name: GiveMeaning Proposals 
