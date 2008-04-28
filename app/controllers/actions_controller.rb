@@ -1,7 +1,7 @@
 class ActionsController < ApplicationController
   
   def index
-    @search = Search.new(params[:search])
+    @search = Search.new(search_params)
     @actions = @search.results(params[:page])
     respond_to do |format|
       format.html
@@ -10,7 +10,7 @@ class ActionsController < ApplicationController
   end
   
   def random
-    @search = Search.new(params[:search].merge(:kind => 'random'))
+    @search = Search.new(search_params.merge(:kind => 'random'))
     @actions = @search.results(params[:page])
     if @actions.empty?
       redirect_to(:back)

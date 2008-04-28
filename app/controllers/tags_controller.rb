@@ -17,6 +17,6 @@ private
   end
   
   def load_search
-    @search = Search.new(params[:search])
+    @search = Search.new(search_params)
   end
 end

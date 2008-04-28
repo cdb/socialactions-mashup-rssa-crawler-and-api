@@ -193,4 +193,4 @@ microgiving:
   location_finder:
   last_accessed: <%= 1.day.ago %>
   site: microgiving
-  action_type: Group Fundraiser 
+  action_type: Group Fundraiser

@@ -6,7 +6,8 @@
     %table{ :border=>"0", :cellpadding=>"0", :cellspacing=>"0" }
       %tr.first
         %td Search Term:
-        %td= f.text_field :keywords, :size => 22
+        %td= text_field_tag :keywords, @search.keywords, :size => 22
+        
         %td
           = submit_tag 'Search'
           &nbsp;
@@ -17,15 +18,15 @@
           = submit_tag 'Random', :onclick => "$('#new_search').attr('action', '#{random_path}')"
       %tr
         %td Type of Action:
-        %td= f.select :action_type, options_for_action_type_select
+        %td= select_tag :action_type, options_for_select(options_for_action_type_select, @search.action_type)
         %td
           Created:
-          = f.select :created, options_for_created_select
+          = select_tag :created, options_for_select(options_for_created_select, @search.created)
   
     - Site.find(:all, :order => :name).each_slice(5) do |sites|
       .platform_select
         - sites.each do |site|
-          = check_box_tag 'search[sites][]', site.id, @search.has_site?(site)
+          = check_box_tag 'sites[]', site.id, @search.has_site?(site)
           = site.name
           %br/
           
