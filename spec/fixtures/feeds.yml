@@ -176,3 +176,21 @@ donorschoose:
   last_accessed: <%= 1.day.ago %>
   site: donorschoose
   action_type: Group Fundraiser
+
+pincgiving:
+  name: PincGiving
+  url: http://www.pincgiving.com/feed/campaign
+  tag_finder: 
+  location_finder:
+  last_accessed: <%= 1.day.ago %>
+  site: pincgiving
+  action_type: Group Fundraiser  
+  
+microgiving:
+  name: MicroGiving
+  url: http://www.microgiving.com/feed-requested.php
+  tag_finder: 
+  location_finder:
+  last_accessed: <%= 1.day.ago %>
+  site: microgiving
+  action_type: Group Fundraiser 

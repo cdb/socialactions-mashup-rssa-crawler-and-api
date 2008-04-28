@@ -65,3 +65,11 @@ helpalot:
 donorschoose:
   name: DonorsChoose
   url: http://www.donorschoose.org
+  
+pincgiving:
+  name: PincGiving
+  url: http://www.pincgiving.com
+
+microgiving:
+  name: MicroGiving
+  url: http://www.microgiving.com
