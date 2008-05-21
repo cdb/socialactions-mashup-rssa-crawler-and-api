@@ -134,7 +134,7 @@ kiva:
   
 six_degrees:
   name: SixDegrees
-  url: http://www.networkforgood.org/pca/badgefeed.aspx
+  url: http://www.networkforgood.org/data/BadgePromotionFeed.aspx?source=SIXDEG&cmpgn=SCB&type=RecentBadge
   tag_finder: 
   location_finder: 
   last_accessed: <%= 1.day.ago %>
