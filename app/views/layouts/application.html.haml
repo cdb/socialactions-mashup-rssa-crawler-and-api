@@ -4,6 +4,7 @@
   %head
     %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}/
     %title A Mashup of 29+ Social Action Platforms
+    %link{ :rel => 'alternate', :type => 'application/atom+xml', :title => "Social Actions: Results for #{@search.to_s}", :href => feed_url }
     = stylesheet_link_tag 'main', 'facebox'
     = javascript_include_tag 'jquery', 'facebox', 'application'
     = yield :map_headers

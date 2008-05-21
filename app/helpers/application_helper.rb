@@ -42,4 +42,8 @@ module ApplicationHelper
     output.join(' ') + '...'
   end
   
+  def feed_url
+    formatted_actions_url(:rss, search_params_readable).gsub('&amp;', '&')
+  end
+  
 end

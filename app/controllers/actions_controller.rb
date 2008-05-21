@@ -5,7 +5,9 @@ class ActionsController < ApplicationController
     @actions = @search.results(params[:page])
     respond_to do |format|
       format.html
-      format.xml
+      format.xml { render :xml => @actions }
+      format.js  { render :json => @actions }
+      format.rss { render :layout => false }
     end
   end
   

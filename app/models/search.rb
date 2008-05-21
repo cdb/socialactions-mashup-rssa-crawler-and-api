@@ -13,6 +13,14 @@ class Search < ActiveRecord::BaseWithoutTable
       Action.paginate(:all, :page => page, :order => build_order, :conditions => build_conditions)
     end
   end
+  
+  def to_s
+    output = []
+    output << "Keywords: #{keywords}" if keywords?
+    output << "Created: #{created}" if created?
+    output << "Action Type: #{action_type}" if action_type?
+    output.join(', ')
+  end
 
   def build_conditions
     reset_conditions
