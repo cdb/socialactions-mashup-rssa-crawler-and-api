@@ -4,6 +4,7 @@ class Action < ActiveRecord::Base
 
   belongs_to :feed
   belongs_to :site
+  has_many :donations
   
   acts_as_taggable
   acts_as_mappable :lat_column_name => :latitude, :lng_column_name => :longitude

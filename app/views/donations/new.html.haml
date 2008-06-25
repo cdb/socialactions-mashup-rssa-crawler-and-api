@@ -1,0 +1,194 @@
+#search_results
+  = render :partial => 'actions/action', :locals => {:action => @action}
+  
+  
+  .donations
+    %h2 Donate Now
+    
+    - form_for @donation do |f|
+      %p
+        I want to contribute: &nbsp;$&nbsp;
+        = f.text_field :amount, :size => 5, :maxlength => 10
+        = '.00 USD'
+        %span ($10 USD minimum)
+
+      %p{ :style => "margin-top:15px" }
+        %strong
+          Please share with this charity:
+      %table{ :style => "border-collapse:collapse;" }
+        %tr
+          %td
+            = f.radio_button :disclosure, 'ProvideAll'
+            %label{ :for => "donation_disclosure_provideall" }
+              My full contact information
+        %tr
+          %td
+            = f.radio_button :disclosure, 'ProvideNameAndEmailOnly'
+            %label{ :for => "donation_disclosure_providenameandemailonly" }
+              My name and email address only
+        %tr
+          %td
+            = f.radio_button :disclosure, 'Anonymous'
+            %label{ :for => "donation_disclosure_anonymous" }
+              None of my personal information (anonymous)
+
+      %br/
+      %p{ :style => "margin-left:0px;padding-left:0px" }
+        %strong
+          Billing Information
+      %p
+        = required_image
+        indicates required
+
+
+      %table{ :cellpadding => "3" }
+        %tr
+          %td{ :colspan => "2" }
+            %br/
+            %p
+              %em
+                Credit Card Billing Information
+        
+        - fields_for @donation.donor do |d|
+          %tr
+            %td{ :align => "right" }
+              = required_image
+              First Name:
+            %td
+              = d.text_field :first_name, :size => 20, :maxlength => 25
+
+          %tr
+            %td{ :align => "right" }
+              = required_image
+              Last Name:
+            %td
+              = d.text_field :last_name, :size => 20, :maxlength => 25
+
+          %tr
+            %td{ :align => "right" }
+              = required_image
+              Address 1:
+            %td
+              = d.text_field :address1, :size => 30, :maxlength => 100
+
+          %tr
+            %td{ :align => "right" }
+              Address 2:
+            %td
+              = d.text_field :address2, :size => 30, :maxlength => 100
+
+          %tr
+            %td{ :align => "right" }
+              = required_image
+              City:
+            %td
+              = d.text_field :city, :size => 20, :maxlength => 30
+
+          %tr
+            %td{ :align => "right" }
+              = required_image
+              State:
+            %td
+              = d.select :state, states_for_select
+
+          %tr
+            %td{ :align => "right" }
+              = required_image
+              ZIP Code:
+            %td
+              = d.text_field :size => 10, :maxlength => 10
+
+          %tr
+            %td{ :align => "right" }
+              = required_image
+              Phone:
+            %td
+              %span
+                (
+              = d.text_field :phone_1, :size => 3, :maxlength => 3
+              %span
+                )
+              = d.text_field :phone_2, :size => 3, :maxlength => 3
+              = '–'
+              = d.text_field :phone_3, :size => 4, :maxlength => 4
+
+          %tr
+            %td{ :align => "right" }
+              = required_image
+              E-mail Address:
+            %td
+              = d.text_field :email, :size => 30, :maxlength => 100
+
+          %tr
+            %td{ :align => "right" }
+              CC E-mail Address:
+            %td
+              = d.text_field :cc_email, :size => 30, :maxlength => 100
+
+        - fields_for @credit_card do |c|
+          %tr
+            Start Payment Method
+            %td{ :colspan => "2" }
+              %br/
+              %p
+                %em
+                  Payment Method
+          %tr
+            %td{ :align => "right" }
+              = required_image
+              Name on Card:
+            %td
+              = c.text_field :name, :size => 25, :maxlength => 100, :autocomplete => 'off'
+          %tr
+            %td{ :align => "right" }
+              = required_image
+              Type of Card:
+            %td.tSmall
+              = c.select :type, card_types_for_select
+
+          %tr
+            %td{ :align => "right" }
+              = required_image
+              Card Number:
+            %td
+              = c.text_field :number, :size => 16, :maxlength => 16, :autocomplete => 'off'
+              %span
+                &nbsp;&nbsp;(No dashes or spaces)
+
+          %tr
+            %td{ :align => "right" }
+              = required_image
+              CSC/CVV2:
+            %td
+              = c.text_field :csc, :size => 6, :maxlength => 4, :autocomplete => 'off'
+
+          %tr
+            %td{ :nowrap => "", :align => "right" }
+              = required_image
+              Expiration Date:
+            %td
+              = c.date_select :expiry_date, :discard_day => true, :start_year => Time.now.year, :order => [:month, :year]
+
+      %br/
+      %p{ :style => "margin-left:0px;padding-left:0px" }
+        %strong
+          Choose a Fee Option
+      %table#theTemplate__ctl10_rblFeeOption{ :border => "0" }
+        %tr
+          %td
+            = f.radio_button :fee_option, 'add'
+            %label{ :for => "donation_disclosure_add" }
+              Add the 4.75% processing fee to my donation so that 100% of my donation goes to my charity(ies).
+        %tr
+          %td
+            = f.radio_button :fee_option, 'deduct'
+            %label{ :for => "donation_disclosure_deduct" }
+              Deduct the 4.75% processing fee from the donation amount forwarded to my charity(ies).
+      %br/
+      %p
+        %a{ :href => "nfg_step3.html" }
+          %img{ :src => "btn_donate_now.gif", :border => "0" }/
+      %p{ :style => "text-align:right;" }
+        %img{ :src => "powered_by_networkforgood.jpg", :height => "35", :alt => "Powered by NetworkforGood", :width => "160" }/
+    %a.action-url{ :href => "http://www.networkforgood.org/pca/Badge.aspx?BadgeId=111783" }
+      http://www.networkforgood.org/pca/Badge.aspx?BadgeId=111783

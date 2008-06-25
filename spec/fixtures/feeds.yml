@@ -6,6 +6,7 @@ global_giving:
   last_accessed: <%= 1.day.ago %>
   site: global_giving
   action_type: Group Fundraiser
+  donations: false
 
 pledge_bank:
   name: PledgeBank
@@ -15,7 +16,8 @@ pledge_bank:
   last_accessed: <%= 1.day.ago %>
   site: pledge_bank
   action_type: Pledged Action
-
+  donations: false
+  
 change_org_giving:
   name: Change.org Giving Networks
   url: http://www.change.org/giving_networks/rss
@@ -24,6 +26,7 @@ change_org_giving:
   last_accessed: <%= 1.day.ago %>
   site: change_org
   action_type: Group Fundraiser
+  donations: false
   
 change_org_changes:
   name: Change.org Changes 
@@ -33,6 +36,7 @@ change_org_changes:
   last_accessed: <%= 1.day.ago %>
   site: change_org
   action_type: Affinity Group
+  donations: false
 
 razoo_acts:
   name: Razoo Acts
@@ -42,6 +46,7 @@ razoo_acts:
   last_accessed: <%= 1.day.ago %>
   site: razoo
   action_type: Pledged Action
+  donations: false
   
 razoo_goals:
   name: Razoo Goals
@@ -51,6 +56,7 @@ razoo_goals:
   last_accessed: <%= 1.day.ago %>
   site: razoo
   action_type: Group Fundraiser
+  donations: false
 
 democracy_in_action:
   name: DemocracyinAction
@@ -60,6 +66,7 @@ democracy_in_action:
   last_accessed: <%= 1.day.ago %>
   site: democracy_in_action
   action_type: Group Fundraiser
+  donations: false
 
 care_2_petitions:
   name: Care2 Petitions
@@ -69,6 +76,8 @@ care_2_petitions:
   last_accessed: <%= 1.day.ago %>
   site: care_2_petitions
   action_type: Petition
+  donations: false
+
 the_point:
   name: ThePoint
   url: http://www.thepoint.com/rss
@@ -77,6 +86,7 @@ the_point:
   last_accessed: <%= 1.day.ago %>
   site: the_point
   action_type: Pledged Action
+  donations: false
 
 give_meaning_proposals:
   name: GiveMeaning Proposals 
@@ -86,6 +96,7 @@ give_meaning_proposals:
   last_accessed: <%= 1.day.ago %>
   site: give_meaning
   action_type: Pledged Action
+  donations: false
 
 give_meaning_projects:
   name: GiveMeaning Projects
@@ -95,6 +106,7 @@ give_meaning_projects:
   last_accessed: <%= 1.day.ago %>
   site: give_meaning
   action_type: Pledged Action
+  donations: false
   
 changing_the_present:
   name: ChangingthePresent New Drives
@@ -104,6 +116,7 @@ changing_the_present:
   last_accessed: <%= 1.day.ago %>
   site: changing_the_present
   action_type: Group Fundraiser
+  donations: false
 
 fundable:
   name: Fundable
@@ -113,6 +126,7 @@ fundable:
   last_accessed: <%= 1.day.ago %>
   site: fundable
   action_type: Group Fundraiser
+  donations: false
   
 bring_light:
   name: BringLight
@@ -122,6 +136,7 @@ bring_light:
   last_accessed: <%= 1.day.ago %>
   site: bring_light
   action_type: Group Fundraiser
+  donations: false
 
 kiva:
   name: Kiva
@@ -131,6 +146,7 @@ kiva:
   last_accessed: <%= 1.day.ago %>
   site: kiva
   action_type: Micro-credit Loan
+  donations: false
   
 six_degrees:
   name: SixDegrees
@@ -140,6 +156,7 @@ six_degrees:
   last_accessed: <%= 1.day.ago %>
   site: six_degrees
   action_type: Group Fundraiser
+  donations: true
 
 first_giving:
   name: Firstgiving
@@ -149,6 +166,7 @@ first_giving:
   last_accessed: <%= 1.day.ago %>
   site: first_giving
   action_type: Group Fundraiser
+  donations: false
 
 zazengo:
   name: Latest Zazengo Projects
@@ -158,6 +176,7 @@ zazengo:
   last_accessed: <%= 1.day.ago %>
   site: zazengo
   action_type: Affinity Group
+  donations: false
 
 helpalot:
   name: Helpalot
@@ -167,6 +186,7 @@ helpalot:
   last_accessed: <%= 1.day.ago %>
   site: helpalot
   action_type: Affinity Group
+  donations: false
 
 donorschoose:
   name: DonorsChoose
@@ -176,6 +196,7 @@ donorschoose:
   last_accessed: <%= 1.day.ago %>
   site: donorschoose
   action_type: Group Fundraiser
+  donations: false
 
 pincgiving:
   name: PincGiving
@@ -185,6 +206,7 @@ pincgiving:
   last_accessed: <%= 1.day.ago %>
   site: pincgiving
   action_type: Group Fundraiser  
+  donations: false
   
 microgiving:
   name: MicroGiving
@@ -194,3 +216,4 @@ microgiving:
   last_accessed: <%= 1.day.ago %>
   site: microgiving
   action_type: Group Fundraiser
+  donations: false
